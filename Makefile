@@ -1,10 +1,11 @@
-CHAPTERS = $(wildcard chapters/*.tex)
-MAIN = endlesshorizons_phb.tex
-DOCUMENT = $(subst .tex,.pdf,${MAIN})
+BOOKS := core
 
-${DOCUMENT}: ${MAIN} ${CHAPTERS}
-	pdflatex $<
+all: ${BOOKS}
 
-all: ${DOCUMENT}
+$(BOOKS):
+	make -C $@ -I$(CURDIR)
 
-.PHONY: all
+clean:
+	git clean -Xf
+
+.PHONY: all clean $(BOOKS)
