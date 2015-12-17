@@ -43,16 +43,316 @@ The opponent is not allowed to dodge or block and has to take the attack.
 A player character can engage another in melee combat if they are close to each
 other (up to a metre). To attack another opponent in melee roll a skill check
 of the \emph{Melee Combat} skill. If it counts as a \emph{surprise attack} the
-opponent is not allowed to dodge or block and must take the attack. The attacker
-rolls for damage.
+opponent is not allowed to dodge or block and must take the attack. If attacker
+hits, he rolls for damage. See the equipment section for weapons and their
+damage.
 
 If the opponent is aware of the attack he may now use one of his actions this
-rounds to dodge attack. If he has no more actions left, he cannot dodge. To
-dodge attack the opponent makes a \emph{Dodge} check against the attacker's
+round to dodge the attack. If he has no more actions left, he cannot dodge. To
+dodge the attack the opponent makes a \emph{Dodge} check against the attacker's
 attack check. If the defender exceeds the attack roll he has successfully evaded
 the attack and takes no damage.
 
 Should the opponent be out of actions for this turn, he may only block the
 attack. The opponent rolls a ten sided die (d10) and adds \emph{Strength} and
-\emph{Constitution} to the dice result. If he exceeds the attack roll, he has
-successfully blocked the attack, and damage received is halved.
+\emph{Constitution} modifiers to the dice result. If he exceeds the attack roll,
+he has successfully blocked the attack, and damage received is halved.
+
+\subsection{Ranged Combat}
+
+Ranged combat works differently. A player chooses to engage another in ranged
+combat, takes aim and fires. The player who is being targeted has no chance
+usually has little change to evade (except on extreme distances). The difficulty
+of landing a successful hit depends on several factors:
+
+\begin{itemize}
+\item \emph{Size}: The difficulty increases if the target is smaller or
+  decreases if the target is bigger.
+\item \emph{Range}: Depending on the weapon in question, targets get harder to
+  hit at longer ranges.
+\item \emph{Stances}: Various stances can decrease the difficulty. A person
+  firing fully automatic while standing has a lower chance of hitting than a
+  person who fires single shots from the prone position.
+\item \emph{Movement}: A moving target is hard to hit, especially at further
+  ranges.
+\item \emph{Environmental}: Bad sight, strong winds can all affect on how well
+  a character can hit a target.
+\end{itemize}
+
+The game master calculates the difficulty of the task depending on these factors
+and player rolls an appropriate skill check. If he reaches it or exceeds the
+difficulty he scores a hit.
+
+\subsubsection{Cover}
+
+The best way to protect oneself from fire is to hide beneath or behind cover.
+Depending on the material of the cover bullets may still be able to penetrate
+the cover and cause damage to the people behind the cover.
+
+For example most bullets can penetrate a wooden cover, whereas a .50 BMG is even
+capable of tearing through brick walls.
+
+\subsubsection{Size}
+
+The game separates targets into size categories. An average human standing is
+considered a \emph{medium} target. The same average human that is either sitting
+on the floor or kneeling is considered a \emph{small} target. The same person
+in the prone position is considered \emph{tiny}. These size categories do not
+change depending on the distance from the shooter. They just help to categorize
+the targets. For example a big dog would be considered a \emph{small} target,
+while a sneaking would count as \emph{tiny}.
+
+Targets larger than a human also have their own size categories. A car, for
+example is considered a \emph{large} target. So are some other vehicles that
+fit roughly the same size. Bigger targets are considered \emph{huge}, for
+example large vehicles (main battle tanks, MRAPs, IVFs) or even space ships.
+
+\subsubsection{Range}
+
+The range to a target is always given rough estimate in metres. The game master
+should avoid making a science of it, and should operate in rough estimates.
+
+The gun play mechanics then categorize these ranges into what is called an
+\emph{effective range}\footnote{Many readers, who know their way around
+  firearms: Sorry for inducing cringe.} This is a metric used in conjunction
+with firearms to determine how effective they are at certain ranges. The authors
+know that firearms are more complicated than that, and much of it depends on the
+skill of the shooter involved. Still this metric is used for abstraction and for
+balancing reasons.
+
+The \emph{effective range} is broadly defined as the distance an average shooter
+should be able to hit a \emph{medium} target half of the time. Other ranges are
+derived from this in fractions:
+
+\begin{itemize}
+\item \emph{Maximum}: Between \emph{effective range} and half the
+  \emph{effective range}.
+\item \emph{Far}: Between \emph{maximum} and a quarter of the
+  \emph{effective range}.
+\item \emph{Medium}: Between \emph{far} and a eigth of the
+  \emph{effective range}.
+\item \emph{Close}: Everything below an eights of the \emph{effective range}.
+\end{itemize}
+
+For example, let's assume a Glock 17 has an effective range of 50
+metres. The ranges are thus as following: \emph{Maximum} is between 50
+and 25 metres. \emph{Far} between 25 and 12.5 metres. \emph{Medium}
+between 12.5 metres and six metres, and \emph{close} is everything
+closer than six metres.
+
+The size category of the target and the range category are combined and lead
+to the following table of penalties for the difficulty task:
+
+\begin{center}
+  \begin{tabular}{| l | l | l | l | l |}
+    \hline
+    \,        & Close & Medium & Far & Maximum \\ \hline
+    Tiny      & +3    & +6     & +12 & +18    \\ \hline
+    Small     & +2    & +4     & +8  & +12    \\ \hline
+    Medium    & +1    & +2     & +4  & +6     \\ \hline
+    Large     & -12   & -8     & -4  & -2     \\ \hline
+    Huge      & -18   & -12    & -6  & -3     \\
+    \hline
+  \end{tabular}
+\end{center}
+
+\subsubsection{Movement}
+
+Movement is also categorized into four categories: \emph{still}, \emph{subtle},
+\emph{slow} and \emph{fast}. A normal human being standing is considered
+moving \emph{subtly} as no personal normally stands perfectly still. Objects
+may as well stand perfectly \emph{still}, as in their movement are not
+noticable. So do living beings who are perhaps bound, unconscious or otherwise
+incapable of moving. \emph{Slow} movement incorporates anything at the speed
+of an average human walking. \emph{Fast} is anything that moves at a speed of
+an average human sprinting or above.
+
+The penalties are as followed:
+
+\begin{center}
+  \begin{tabular}{| l | l | l | l | l |}
+    \hline
+    \,      & Still & Subtle & Slow & Fast \\ \hline
+    Penalty & -2    & 0      & +2   & +4   \\
+    \hline
+  \end{tabular}
+\end{center}
+
+These penalties apply for both a moving target, and a shooter that is moving. So
+a player who is running and shooting at a target that is also running as a
+cumulative penalty of plus eight (+8).
+
+\subsubsection{Stance}
+
+A person firing can be in one of the following firing stances: \emph{standing},
+\emph{kneeling}, \emph{prone}, and \emph{other}. Standing also makes the person
+in question a medium target, \emph{kneeling} makes him a small and \emph{prone}
+a tiny target.
+
+The stances above assume that the character is in the proper firing positions.
+A person who just fell down to the floor on his back is \emph{not} considered to
+be in prone firing position. Although the person would still be considered a
+tiny target.
+
+The penalties for the stances are as followed:
+
+\begin{center}
+  \begin{tabular}{| l | l |}
+    \hline
+    Stance   & Penalty \\ \hline
+    Standing & -1      \\ \hline
+    Kneeling & -2      \\ \hline
+    Prone    & -3      \\
+    \hline
+  \end{tabular}
+\end{center}
+
+\subsubsection{Taking Aim}
+
+A character may expand an action to take careful aim. The difficulty is reduced
+by two (2) for each action he chooses to take aim for, up to a maximum of 6 for
+three actions.
+
+\subsubsection{Bursts and Full Auto}
+
+Each weapon which is capable of burst firing or fully automatic has a recoil
+modifier. Each subsequent bullet adds this recoil modifier to the difficulty.
+Regardless only one attack roll is made for the burst. As many bullets of the
+burst hit as the attack roll meets or exceeds in difficulty. While the
+progression is linear (per bullet) in a real life scenario it is perfectly
+reasonable for the first bullet to hit, the second to miss and the third to
+hit again.
+
+Example: A player wishes to shoot a three round burst at a target. The
+difficulty is determined to be 16 and the recoil modifier of the gun is 2.
+The player rolls a 19. This means that the first bullet (difficulty 16) hits,
+the second does as well (as the player's 19 is above 16 plus 2) but the third
+bullet does not (19 is below 20).
+
+\subsubsection{Reloading}
+
+Reloading a firearms takes a certain amount of actions. If not otherwise noted
+in the description of the firearm, a reload time of one action is assumed.
+
+\subsubsection{Malfunctions}
+
+Firearms are mechanical devices that can fail. Wear and tear, or inproper
+cleaning and handling can contribute to these malfunctions or stoppages. There
+are variety of possible malfunctions, ranging from temporary to relative save
+malfunctions to potentially dangerous ones that can permanently damage the gun
+or cause injury or death.
+
+A minor fault is a \emph{failure to feed} (FTF) when the firearm fails to feed
+the next cartridge into the chamber from a magazine. It can also be caused by
+not holding the fire arm properly (``limp wristing''). It can usually be cleared
+in one action and does not immediately threaten the shooter.
+
+A stovepipe (\emph{failure to eject}) occours when the spent casing is not
+properly ejected from the firearm, causing it to jam the ejection port. It
+presents no immediate danger to the shooter and can be cleared in one action.
+
+A severe major fault is a so called \emph{squib load} where the projectile does
+not have enough force to exit the barrel and becomes stuck. A subsequent bullet
+fired afterwards can cause catastrophic failure, causing damage to the firearm
+and injury to the shooter.
+
+\subsubsection{Determining Difficulty}
+
+The base difficulty for ranged attacks is five (5). Then you combine the size
+category and the range category and add it. Then you add a movement penalty,
+if the target is moving or the shooter is moving. Then you add stance modifiers,
+any environmental modifiers and any miscellaneous modifiers.
+
+\emph{Example}: A player wishes to fire a three round burst with his rifle
+(recoil modifier of 2) (range 300 metres) at a small target roughly 100 metres
+out. It is dusk and the game master decides that he has an additional penalty
+of +2 for from low light conditions. The player as a dexterity and perception
+modifier of +1, and three ranks in the appropriate skill. The difficulty is
+determined as following:
+
+\[
+DC = 5 \ub{+ 8}{range} \ob{+ 1}{low light} \ub{- 1}{stance} = 13
+\]
+
+The player rolls the following:
+
+\[
+1d10 = 8 \ub{+ 1}{dexterity} \ob{+ 1}{perception} \ub{+ 3}{skill} = 13
+\]
+
+And scores one hit. The other two of his bullets miss.
+
+\subsection{Thrown Weapons}
+
+Thrown weapons (throwing knives, axes and hand grenades) are handled just like
+other ranged weapons, except that a different skill is used in the checks:
+\emph{Throwing}. Thrown weapons also have an \emph{effective range} and cause
+damage just like a bullet from a firearm would.
+
+\subsubsection{Grenades}
+
+Throwing a grenade at a specific area (for example next or behind a cover) is
+usually considered a range task with a \emph{medium} target (the area). Any
+special circumstances might reduce or widen the size. For example throwing a
+grenade into a window would cause the target to be \emph{small} (for a small
+window), or casting a grenade into a small man-hole might even be considered
+a \emph{tiny} target.
+
+Most hand held explosive grenades have what is called an \emph{effective} and
+an \emph{casualty} radius. Everyone within the \emph{effective} radius, that is
+not protected by grenade proof cover, dies. Within the \emph{casualty} radius
+a grenade deals enough damage to kill or incapacitate all of the targets.
+
+Grenades cause two types of damage: \emph{bludgeoning} from the explosive shock
+wave, and piercing \emph{piercing} from the flying shrapnel. Due to the massive
+amounts of shrapnel only full cover or full body armour can protect against the
+piercing damage.
+
+\subsection{Damage}
+
+The weapon used always determines the amount and type of damage that can be
+caused to another. A knife for example can deal piercing or slashing damage
+depending how it's being used. A firearm usually causes piercing and
+bludgeoning damage. Hits with bare fists may just cause bludgeoning damage.
+
+Other forms of damage are of course also possible, for example a player can
+take fire damage from an open flame, or acid damage from being exposed to
+acids or other corrosive fluids.
+
+\subsubsection{Zones and Wounds}
+
+When a player hits another, either with a ranged or melee weapon, the attacking
+player rolls two six sided die (2d6) to determine where he scores a hit.
+
+The target then determines if he has clothing or armor that protects him in this
+region and substracts any relevant damage reductions from the incoming damage.
+If any damage is left the target resolves any effects of the target area (for
+example damage multiplier) and substracts that number from his hit points. If
+the target reaches zero or below zero hit points total, the target is dead.
+
+If the target survives it, he then has to roll another check to see if the
+injury causes a major wound. The difficulty is determined as followed:
+
+\[
+DC = \ub{5}{base} + \ob{dmg}{Damage taken}
+\]
+
+Against the following check:
+
+\[
+1d10 + \ub{con}{Constition score}
+\]
+
+The table below describes the wound zones and their effects:
+
+\begin{center}
+  \begin{tabular}{|l|l|l|l|}
+    \hline
+    Roll  & Zone  & Effect           & Major Wound     \\ \hline
+    2-4   & Head  & \( Damage * 3 \) & -2 Perception   \\ \hline
+    5-7   & Arms  &                  & -2 Dexterity    \\ \hline
+    8-9   & Legs  &                  & -2 Speed        \\ \hline
+    10-12 & Torso & \(Damage * 2 \)  & -2 Constitution \\
+    \hline
+  \end{tabular}
+\end{center}
