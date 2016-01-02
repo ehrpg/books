@@ -5,6 +5,34 @@
 The world of Endless Horizon knows only one currency: Credit (C) for short.
 Everything is payed for and with \emph{Credit}.
 
+\section{Melee Weapons}
+
+Below is a list of melee weapons. Most blade weapons allow for either slashing
+damage or piercing damage and a player may select what he wishes to do (i.e.
+slash or try stab the opponent).
+
+\begin{table}
+  \caption{Melee weapons}
+  \begin{center}
+    \begin{tabular}{| l | l | l | l | l |}
+      \hline
+      \textbf{Name} & \textbf{Damage} & \textbf{Cost} & \textbf{Notes} \\ \hline
+
+      Knife & 2d8 & 100 & Combat knife \\ \hline
+      Sword & 3d8 & 200 & \\ \hline
+      Baton & 2d8 & 150 & Deals \emph{bludgeoning} damage \\ \hline
+
+      Throwing Knife & 2d6 & 50 & Can be thrown, 20m effective range \\ \hline
+      Throwing Axe   & 2d6 & 50 & Can be thrown, 20m effective range \\ \hline
+
+    \end{tabular}
+  \end{center}
+\end{table}
+
+Armour does protect against knife and sword slashes, and every metal plate
+also stops the blade from piercing into the body. Kevlar however cannot stop
+a piercing blade.
+
 \section{Firearms}
 
 This section lists all available firearms. Each firearm uses a magazine to feed
@@ -54,78 +82,87 @@ normal, sub sonic, tracer; and may come with different bullets (hollow point,
 armor penetrating steel tip). Down below is a list of cartridges that are
 currently available in \emph{Endless Horizons}:
 
-\begin{center}
-  \begin{tabular}{| l | l | l | l | l | l |}
-    \hline
-    \textbf{Cartridge}  & \textbf{Type}   & \textbf{Piercing} &
-    \textbf{Bludgeoning} & \textbf{Cost}  & \textbf{Notes}        \\ \hline
+\begin{table}
+  \caption{Pistol cartridges}
+  \begin{center}
+    \begin{tabular}{| l | l | l | l | l | l |}
+      \hline
+      \textbf{Cartridge}  & \textbf{Type}   & \textbf{Damage} &
+      \textbf{Cost}  & \textbf{Notes} \\ \hline
 
-    9x18    & Normal & 1d4  & 1d4  & 10 (50 Rnds.) & Stopped by Class II \\ \hline
-    \,      & AP     & 1d4  & 1d4  & 15 (50 Rnds.) & Stopped by Class III \\ \hline
-    \,      & HP     & 1d6  & 1d6  & 13 (50 Rnds.) & Stopped by Class I \\ \hline
-    9x19    & Normal & 1d6  & 1d6  & 15 (50 Rnds.) & Stopped by Class II \\ \hline
-    \,      & AP     & 1d6  & 1d8  & 20 (50 Rnds.) & Stopped by Class III \\ \hline
-    \,      & HP     & 1d8  & 1d8  & 20 (50 Rnds.) & Stopped by Class II \\ \hline
-    .40 ACP & Normal & 1d8  & 1d8  & 23 (50 Rnds.) & Stopped by Class II, Subsonic \\ \hline
-    \,      & AP     & 1d8  & 1d8  & 25 (50 Rnds.) & Stopped by Class III \\ \hline
-    \,      & HP     & 2d4  & 2d4  & 25 (50 Rnds.) & Stopped by Class II, Subsonic \\ \hline
-    4.6x30  & Normal & 2d4  & 2d4  & 40 (50 Rnds.) & Stopped by Class III \\ \hline
-    \,      & AP     & 2d4  & 2d4  & 60 (50 Rnds.) & Stopped by Class IV \\ \hline
-    \,      & HP     & 2d6  & 2d6  & 50 (50 Rnds.) & Stopped by Class II \\ \hline
-    5.7x28  & Normal & 2d4  & 2d4  & 40 (50 Rnds.) & Stopped by Class III \\ \hline
-    \,      & AP     & 2d4  & 2d4  & 60 (50 Rnds.) & Stopped by Class IV \\ \hline
-    \,      & HP     & 2d6  & 2d6  & 50 (50 Rnds.) & Stopped by Class II \\ \hline
-    9x21    & Normal & 2d4  & 2d4  & 40 (50 Rnds.) & Stopped by Class III \\ \hline
-    \,      & AP     & 2d4  & 2d4  & 60 (50 Rnds.) & Stopped by Class IV \\ \hline
-    \,      & HP     & 2d6  & 2d6  & 50 (50 Rnds.) & Stopped by Class II \\ \hline
+      9x18    & Normal & 1d4/1d4  & 10 (50 Rnds.) & Stopped by Class II \\ \hline
+      \,      & AP     & 1d4/1d4  & 15 (50 Rnds.) & Stopped by Class III \\ \hline
+      \,      & HP     & 1d6/1d6  & 13 (50 Rnds.) & Stopped by Class I \\ \hline
+      9x19    & Normal & 1d6/1d6  & 15 (50 Rnds.) & Stopped by Class II \\ \hline
+      \,      & AP     & 1d6/1d8  & 20 (50 Rnds.) & Stopped by Class III \\ \hline
+      \,      & HP     & 1d8/1d8  & 20 (50 Rnds.) & Stopped by Class II \\ \hline
+      .40 ACP & Normal & 1d8/1d8  & 23 (50 Rnds.) & Stopped by Class II, Subsonic \\ \hline
+      \,      & AP     & 1d8/1d8  & 25 (50 Rnds.) & Stopped by Class III \\ \hline
+      \,      & HP     & 2d4/2d4  & 25 (50 Rnds.) & Stopped by Class II, Subsonic \\ \hline
+      4.6x30  & Normal & 2d4/2d4  & 40 (50 Rnds.) & Stopped by Class III \\ \hline
+      \,      & AP     & 2d4/2d4  & 60 (50 Rnds.) & Stopped by Class IV \\ \hline
+      \,      & HP     & 2d6/2d6  & 50 (50 Rnds.) & Stopped by Class II \\ \hline
+      5.7x28  & Normal & 2d4/2d4  & 40 (50 Rnds.) & Stopped by Class III \\ \hline
+      \,      & AP     & 2d4/2d4  & 60 (50 Rnds.) & Stopped by Class IV \\ \hline
+      \,      & HP     & 2d6/2d6  & 50 (50 Rnds.) & Stopped by Class II \\ \hline
+      9x21    & Normal & 2d4/2d4  & 40 (50 Rnds.) & Stopped by Class III \\ \hline
+      \,      & AP     & 2d4/2d4  & 60 (50 Rnds.) & Stopped by Class IV \\ \hline
+      \,      & HP     & 2d6/2d6  & 50 (50 Rnds.) & Stopped by Class II \\ \hline
 
-  \end{tabular}
-\end{center}
+    \end{tabular}
+  \end{center}
+\end{table}
 
-\begin{center}
-  \begin{tabular}{| l | l | l | l | l | l |}
-    \hline
-    \textbf{Cartridge}  & \textbf{Type}   & \textbf{Piercing} &
-    \textbf{Bludgeoning} & \textbf{Cost}  & \textbf{Notes}        \\ \hline
+\begin{table}
+  \caption{Rifle cartridges}
+  \begin{center}
+    \begin{tabular}{| l | l | l | l | l | l |}
+      \hline
+      \textbf{Cartridge}  & \textbf{Type} & \textbf{Damage} &
+      \textbf{Cost}  & \textbf{Notes} \\ \hline
 
-    7.62x39  & Normal  & 2d10  & 2d10  & 70 (30 Rnds.)  & Stopped by Class IV \\ \hline
-    \,       & AP      & 2d10  & 2d20  & 120 (30 Rnds.) & Stopped by Class V \\ \hline
-    5.56x45  & Normal  & 2d8   & 2d8   & 80 (30 Rnds.)  & Stopped by Class III \\ \hline
-    \,       & AP      & 2d8   & 2d8   & 100 (30 Rnds.) & Stopped by Class IV \\ \hline
-    \,       & HP      & 2d10  & 2d10  & 120 (30 Rnds.) & Stopped by Class III \\ \hline
-    5.45x39  & Normal  & 2d8   & 2d8   & 70 (30 Rnds.)  & Stopped by Class III \\ \hline
-    \,       & AP      & 2d8   & 2d8   & 90 (30 Rnds.)  & Stopped by Class IV \\ \hline
-    \,       & HP      & 2d10  & 2d10  & 110 (30 Rnds.) & Stopped by Class III \\ \hline
-    7.62x51  & Normal  & 2d10  & 2d10  & 100 (20 Rnds.) & Stopped by Class IV \\ \hline
-    \,       & AP      & 2d10  & 2d10  & 130 (20 Rnds.) & Stopped by Class V \\ \hline
-    \,       & HP      & 3d6   & 3d6   & 150 (20 Rnds.) & Stopped by Class IV \\ \hline
-    7.62x54  & Normal  & 2d10  & 2d10  & 100 (20 Rnds.) & Stopped by Class IV \\ \hline
-    \,       & AP      & 2d10  & 2d10  & 130 (20 Rnds.) & Stopped by Class V \\ \hline
-    \,       & HP      & 3d6   & 3d6   & 150 (20 Rnds.) & Stopped by Class IV \\ \hline
-    .50 BMG  & Normal  & 3d8   & 3d8   & 200 (10 Rnds.) & Stopped by Class VI \\ \hline
-    \,       & AP      & 3d8   & 3d8   & 250 (10 Rnds.) & Stopped by Class VII \\ \hline
-    \,       & HP      & 3d10  & 3d10  & 250 (10 Rnds.) & Stopped by Class VI \\ \hline
-    \,       & HEI/AP  & 4d8   & 4d8   & 350 (10 Rnds.) & Stopped by Class VII \\ \hline
-    12.7x108 & Normal  & 3d8   & 3d8   & 200 (10 Rnds.) & Stopped by Class VI \\ \hline
-    \,       & AP      & 3d8   & 3d8   & 250 (10 Rnds.) & Stopped by Class VII \\ \hline
-    \,       & HP      & 3d10  & 3d10  & 250 (10 Rnds.) & Stopped by Class VI \\ \hline
-    \,       & HEI/AP  & 4d8   & 4d8   & 350 (10 Rnds.) & Stopped by Class VII \\ \hline
+      7.62x39  & Normal  & 2d10/2d10  & 70 (30 Rnds.)  & Stopped by Class IV \\ \hline
+      \,       & AP      & 2d10/2d20  & 120 (30 Rnds.) & Stopped by Class V \\ \hline
+      5.56x45  & Normal  & 2d8/2d8    & 80 (30 Rnds.)  & Stopped by Class III \\ \hline
+      \,       & AP      & 2d8/2d8    & 100 (30 Rnds.) & Stopped by Class IV \\ \hline
+      \,       & HP      & 2d10/2d10  & 120 (30 Rnds.) & Stopped by Class III \\ \hline
+      5.45x39  & Normal  & 2d8/2d8    & 70 (30 Rnds.)  & Stopped by Class III \\ \hline
+      \,       & AP      & 2d8/2d8    & 90 (30 Rnds.)  & Stopped by Class IV \\ \hline
+      \,       & HP      & 2d10/2d10  & 110 (30 Rnds.) & Stopped by Class III \\ \hline
+      7.62x51  & Normal  & 2d10/2d10  & 100 (20 Rnds.) & Stopped by Class IV \\ \hline
+      \,       & AP      & 2d10/2d10  & 130 (20 Rnds.) & Stopped by Class V \\ \hline
+      \,       & HP      & 3d6/3d6    & 150 (20 Rnds.) & Stopped by Class IV \\ \hline
+      7.62x54  & Normal  & 2d10/2d10  & 100 (20 Rnds.) & Stopped by Class IV \\ \hline
+      \,       & AP      & 2d10/2d10  & 130 (20 Rnds.) & Stopped by Class V \\ \hline
+      \,       & HP      & 3d6/3d6    & 150 (20 Rnds.) & Stopped by Class IV \\ \hline
+      .50 BMG  & Normal  & 3d10/3d10  & 200 (10 Rnds.) & Stopped by Class VI \\ \hline
+      \,       & AP      & 3d10/3d10  & 250 (10 Rnds.) & Stopped by Class VII \\ \hline
+      \,       & HP      & 3d12/3d12  & 250 (10 Rnds.) & Stopped by Class VI \\ \hline
+      \,       & HEI/AP  & 4d8/4d8    & 350 (10 Rnds.) & Stopped by Class VII \\ \hline
+      12.7x108 & Normal  & 3d10/3d10  & 200 (10 Rnds.) & Stopped by Class VI \\ \hline
+      \,       & AP      & 3d10/3d10  & 250 (10 Rnds.) & Stopped by Class VII \\ \hline
+      \,       & HP      & 3d12/3d12  & 250 (10 Rnds.) & Stopped by Class VI \\ \hline
+      \,       & HEI/AP  & 4d10/4d10  & 350 (10 Rnds.) & Stopped by Class VII \\ \hline
 
-  \end{tabular}
-\end{center}
+    \end{tabular}
+  \end{center}
+\end{table}
 
-\begin{center}
-  \begin{tabular}{| l | l | l | l | l | l |}
-    \hline
-    \textbf{Cartridge}  & \textbf{Type}   & \textbf{Piercing} &
-    \textbf{Bludgeoning} & \textbf{Cost}  & \textbf{Notes}        \\ \hline
+\begin{table}
+  \caption{Shotgun shells}
+  \begin{center}
+    \begin{tabular}{| l | l | l | l | l | l |}
+      \hline
+      \textbf{Cartridge}  & \textbf{Type}   & \textbf{Piercing} &
+      \textbf{Bludgeoning} & \textbf{Cost}  & \textbf{Notes}        \\ \hline
 
-    12G     & Buckshot & 4d4  & 1d4 & 20 (12 Shells) & Stopped by Class II \\ \hline
-    \,      & Slug     & 3d4  & 2d4 & 25 (12 Shells) & Stopped by Class III \\ \hline
-    \,      & Dart     & 3d4  & 3d4 & 30 (12 Shells) & Stopped by Class III \\ \hline
+      12G     & Buckshot & 4d4  & 1d4 & 20 (12 Shells) & Stopped by Class II \\ \hline
+      \,      & Slug     & 3d4  & 2d4 & 25 (12 Shells) & Stopped by Class III \\ \hline
+      \,      & Dart     & 3d4  & 3d4 & 30 (12 Shells) & Stopped by Class III \\ \hline
 
-  \end{tabular}
-\end{center}
+    \end{tabular}
+  \end{center}
+\end{table}
 
 \subsection{Pistols}
 
@@ -142,7 +179,7 @@ Most pistols are semi automatic, feeding from a detachable box magazine.
     \begin{tabular}{| l | l | l | l | l | l | l | l |}
       \hline
       \textbf{Name} & \textbf{Cartridge} & \textbf{Range} &
-      \textbf{FM} & \textbf{Magazine} & \textbf{Recoil} &
+      \textbf{FM} & \textbf{Cap.} & \textbf{Recoil} &
       \textbf{Cost} & \textbf{Notes} \\ \hline
 
       Makarov PM & 9x18mm & 50m & S & 8  & 1 & 90  & \\ \hline
@@ -159,7 +196,7 @@ Most pistols are semi automatic, feeding from a detachable box magazine.
     \begin{tabular}{| l | l | l | l | l | l | l | l |}
       \hline
       \textbf{Name} & \textbf{Cartridge} & \textbf{Range} &
-      \textbf{FM} & \textbf{Magazine} & \textbf{Recoil} &
+      \textbf{FM} & \textbf{Cap.} & \textbf{Recoil} &
       \textbf{Cost} & \textbf{Notes} \\ \hline
 
       Walther P99  & 9x19mm & 60m & S  & 17 & 2 & 250 & \\ \hline
@@ -181,7 +218,7 @@ Most pistols are semi automatic, feeding from a detachable box magazine.
     \begin{tabular}{| l | l | l | l | l | l | l | l |}
       \hline
       \textbf{Name} & \textbf{Cartridge} & \textbf{Range} &
-      \textbf{FM} & \textbf{Magazine} & \textbf{Recoil} &
+      \textbf{FM} & \textbf{Cap.} & \textbf{Recoil} &
       \textbf{Cost} & \textbf{Notes} \\ \hline
 
       M1911        & .45 ACP & 50m & S &  7 & 3  & 150 & \\ \hline
@@ -206,7 +243,7 @@ list them all.
     \begin{tabular}{| l | l | l | l | l | l | l | l |}
       \hline
       \textbf{Name} & \textbf{Cartridge} & \textbf{Range} &
-      \textbf{FM} & \textbf{Magazine} & \textbf{Recoil} &
+      \textbf{FM} & \textbf{Cap.} & \textbf{Recoil} &
       \textbf{Cost} & \textbf{Notes} \\ \hline
 
       Remington M870 & 12G & 90m & S  & 7+1 & 4 & 310 & Pump-action, tube \\ \hline
@@ -232,7 +269,7 @@ security detail that need a compact but deadly and efficient weapon.
     \begin{tabular}{| l | l | l | l | l | l | l | l |}
       \hline
       \textbf{Name} & \textbf{Cartridge} & \textbf{Range} &
-      \textbf{FM} & \textbf{Magazine} & \textbf{Recoil} &
+      \textbf{FM} & \textbf{Cap.} & \textbf{Recoil} &
       \textbf{Cost} & \textbf{Notes} \\ \hline
 
       MP5            & 9x19   & 150m & SBA & 30 & 3 & 500 & \\ \hline
@@ -265,7 +302,7 @@ cycle anymore and loose half of its effective range.
     \begin{tabular}{| l | l | l | l | l | l | l | l |}
       \hline
       \textbf{Name} & \textbf{Cartridge} & \textbf{Range} &
-      \textbf{FM} & \textbf{Magazine} & \textbf{Recoil} &
+      \textbf{FM} & \textbf{Cap.} & \textbf{Recoil} &
       \textbf{Cost} & \textbf{Notes} \\ \hline
 
       SA Vz. 58    & 7.62x39 & 500m & SA  & 30 & 6 & 500 & \\ \hline
@@ -298,7 +335,7 @@ cycle anymore and loose half of its effective range.
     \begin{tabular}{| l | l | l | l | l | l | l | l |}
       \hline
       \textbf{Name} & \textbf{Cartridge} & \textbf{Range} &
-      \textbf{FM} & \textbf{Magazine} & \textbf{Recoil} &
+      \textbf{FM} & \textbf{Cap.} & \textbf{Recoil} &
       \textbf{Cost} & \textbf{Notes} \\ \hline
 
 
@@ -337,7 +374,7 @@ being fired or not. If it doesn't disintegrate it can be refilled.
     \begin{tabular}{| l | l | l | l | l | l | l | l |}
       \hline
       \textbf{Name} & \textbf{Cartridge} & \textbf{Range} &
-      \textbf{FM} & \textbf{Magazine} & \textbf{Recoil} &
+      \textbf{FM} & \textbf{Cap.} & \textbf{Recoil} &
       \textbf{Cost} & \textbf{Notes} \\ \hline
 
 
@@ -349,30 +386,30 @@ being fired or not. If it doesn't disintegrate it can be refilled.
   \end{center}
 \end{table}
 
-\section{Body Armor}
+\section{Body Armour}
 
-Body armor comes in many different shapes and sizes. The most common are metal
+Body armour comes in many different shapes and sizes. The most common are metal
 plates that are inserted into what is called a ``chest carrier''. These plates
 then stop the bullets from entering and absorb the kinetic force of the bullet.
 The armor usually covers the most vital part of body (i.e. the chest and back)
 and come with a specific rating. If a specificied caliber is stopped by the
-armor the target takes no damage instead. The damage is absorbed by the armor
+armour the target takes no damage instead. The damage is absorbed by the armour
 reaches zero hit points it stops being effective.
 
-Armor is classified into various \emph{tiers} determing what kinds of threats
-it stops. Please see the calibers to see what kind of armor tier a specific
-caliber penetrates. All armor is capable of defending a player from slashing
+Armour is classified into various \emph{tiers} determing what kinds of threats
+it stops. Please see the calibers to see what kind of armour tier a specific
+caliber penetrates. All armour is capable of defending a player from slashing
 damage from knives and other small blades or thrown weapons.
 
 All plates require a carrier.
 
 \begin{table}
-  \caption{Armor}
+  \caption{Armour}
   \begin{center}
     \begin{tabular}{| l | l | l | l | l |}
 
       \hline
-      \textbf{Armor} & \textbf{Class} & \textbf{HP} &
+      \textbf{Armour} & \textbf{Class} & \textbf{HP} &
       \textbf{Cost} & \textbf{Notes} \\ \hline
 
       Kevlar Vest     &  II & 40 & 150 & \\ \hline
@@ -382,6 +419,62 @@ All plates require a carrier.
       Plate Class IV  &  IV & 60 & 350 & \\ \hline
       Plate Class V   &   V & 70 & 450 & \\ \hline
       Plate Class VI  &  VI & 80 & 550 & \\ \hline
+
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\section{Explosives}
+
+\subsection{Fragmentation Grenades}
+
+This section covers hand thrown grenades (hand grenades). The table specifies
+their effective range (the radius in which they are assured to kill), kill
+range and their damage. Inside the kill range half the given damage. If in
+cover remove the piercing damage, as it represents the flying shrapnel.
+
+Most hand grenades come with a pin that has to be pulled in order to arm the
+grenade. Once thrown the lever detaches lighting the fuse. Most fuses range
+between four and six seconds.
+
+\begin{table}
+  \caption{Fragmentation Grenades}
+  \begin{center}
+    \begin{tabular}{| l | l | l | l | l | l |}
+
+      \hline
+      \textbf{Name} & \textbf{Damage} & \textbf{Cost} & \textbf{Range} \\ \hline
+
+      F1 Grenade  & 6d6 piercing/6d6 bludgeoning & 250 & 30m \\ \hline
+      M67         & 6d6 piercing/6d6 bludgeoning & 250 & 30m \\ \hline
+
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\subsection{Non-lethal Grenades}
+
+This section covers non lethal grenades. They also have an effective range
+of about 30 metres.
+
+Smoke grenades come in different colours (although most are white) and can be
+used to block line of sight. Only FLIR (thermal imaging) is capable of seeing
+heat signatures through smoke.
+
+Stun grenades temporarily blinden, deafen and disorient a target for 2d4
+actions.
+
+\begin{table}
+  \caption{Non-lethal Grenades}
+  \begin{center}
+    \begin{tabular}{| l | l | l | l | l | l |}
+
+      \hline
+      \textbf{Name} & \textbf{Note} & \textbf{Cost} & \textbf{Range} \\ \hline
+
+      Stun grenade  & Applies \emph{blinded} and \emph{deafened} for 2d4 actions. & 300 & 30m \\ \hline
+      Smoke grenade & Blocks line of sight, except thermal imaging. & 200 & 30m \\ \hline
+      Sting ball grenade & Applies \emph{stunned} for 2d4 actions. & 300 & 30m \\ \hline
 
     \end{tabular}
   \end{center}
