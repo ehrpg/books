@@ -12,18 +12,20 @@ damage or piercing damage and a player may select what he wishes to do (i.e.
 slash or try stab the opponent).
 
 \begin{table}
+  \label{tab:Melee}
   \caption{Melee weapons}
   \begin{center}
     \begin{tabular}{| l | l | l | l | l |}
       \hline
-      \textbf{Name} & \textbf{Damage} & \textbf{Cost} & \textbf{Notes} \\ \hline
+      \textbf{Name} & \textbf{Damage} & \textbf{Cost} &
+      \textbf{Notes} & \textbf{Weight} \\ \hline
 
-      Knife & 2d8 & 100 & Combat knife \\ \hline
-      Sword & 3d8 & 200 & \\ \hline
-      Baton & 2d8 & 150 & Deals \emph{bludgeoning} damage \\ \hline
+      Knife & 2d8 & 100 & Combat knife \\ 0.3kg \\ \hline
+      Sword & 3d8 & 200 & \\ 1.5kg \\ \hline
+      Baton & 2d8 & 150 & Deals \emph{bludgeoning} damage \\ 0.5kg \\ \hline
 
-      Throwing Knife & 2d6 & 50 & Can be thrown, 20m effective range \\ \hline
-      Throwing Axe   & 2d6 & 50 & Can be thrown, 20m effective range \\ \hline
+      Throwing Knife & 2d6 & 50 & Can be thrown, 20m effective range \\ 0.2kg \\ \hline
+      Throwing Axe   & 2d6 & 50 & Can be thrown, 20m effective range \\ 0.2kg \\ \hline
 
     \end{tabular}
   \end{center}
@@ -86,32 +88,35 @@ Each bullet deals piercing and bludgeoning damage to a target. The piercing
 damage represents the wound canal, and the bludgeoning damage represents the
 kinetic energy transfer to internal organs and tissue.
 
+The cost and weight is for the given ammount of rounds.
+
 \begin{table}
   \caption{Pistol cartridges}
+  \label{tab:PistolCartridges}
   \begin{center}
     \begin{tabular}{| l | l | l | l | l | l |}
       \hline
       \textbf{Cartridge}  & \textbf{Type}   & \textbf{Damage} &
-      \textbf{Cost}  & \textbf{Notes} \\ \hline
+      \textbf{Cost} & \textbf{Weight} & \textbf{Notes} \\ \hline
 
-      9x18    & Normal & 1d4/1d4  & 10 (50 Rnds.) & Stopped by Class II \\ \hline
-      \,      & AP     & 1d4/1d4  & 15 (50 Rnds.) & Stopped by Class III \\ \hline
-      \,      & HP     & 1d6/1d6  & 13 (50 Rnds.) & Stopped by Class I \\ \hline
-      9x19    & Normal & 1d6/1d6  & 15 (50 Rnds.) & Stopped by Class II \\ \hline
-      \,      & AP     & 1d6/1d8  & 20 (50 Rnds.) & Stopped by Class III \\ \hline
-      \,      & HP     & 1d8/1d8  & 20 (50 Rnds.) & Stopped by Class II \\ \hline
-      .45 ACP & Normal & 1d8/1d8  & 23 (50 Rnds.) & Stopped by Class II, Subsonic \\ \hline
-      \,      & AP     & 1d8/1d8  & 25 (50 Rnds.) & Stopped by Class III \\ \hline
-      \,      & HP     & 2d4/2d4  & 25 (50 Rnds.) & Stopped by Class II, Subsonic \\ \hline
-      4.6x30  & Normal & 2d4/2d4  & 40 (50 Rnds.) & Stopped by Class III \\ \hline
-      \,      & AP     & 2d4/2d4  & 60 (50 Rnds.) & Stopped by Class IV \\ \hline
-      \,      & HP     & 2d6/2d6  & 50 (50 Rnds.) & Stopped by Class II \\ \hline
-      5.7x28  & Normal & 2d4/2d4  & 40 (50 Rnds.) & Stopped by Class III \\ \hline
-      \,      & AP     & 2d4/2d4  & 60 (50 Rnds.) & Stopped by Class IV \\ \hline
-      \,      & HP     & 2d6/2d6  & 50 (50 Rnds.) & Stopped by Class II \\ \hline
-      9x21    & Normal & 2d4/2d4  & 40 (50 Rnds.) & Stopped by Class III \\ \hline
-      \,      & AP     & 2d4/2d4  & 60 (50 Rnds.) & Stopped by Class IV \\ \hline
-      \,      & HP     & 2d6/2d6  & 50 (50 Rnds.) & Stopped by Class II \\ \hline
+      9x18    & Normal & 1d4/1d4  & 10 (50 Rnds.) & 0.5kg & Stopped by Class II \\ \hline
+      \,      & AP     & 1d4/1d4  & 15 (50 Rnds.) & 0.6kg & Stopped by Class III \\ \hline
+      \,      & HP     & 1d6/1d6  & 13 (50 Rnds.) & 0.5kg & Stopped by Class I \\ \hline
+      9x19    & Normal & 1d6/1d6  & 15 (50 Rnds.) & 0.6kg & Stopped by Class II \\ \hline
+      \,      & AP     & 1d6/1d8  & 20 (50 Rnds.) & 0.7kg & Stopped by Class III \\ \hline
+      \,      & HP     & 1d8/1d8  & 20 (50 Rnds.) & 0.6kg & Stopped by Class II \\ \hline
+      .45 ACP & Normal & 1d8/1d8  & 23 (50 Rnds.) & 1.0kg & Stopped by Class II, Subsonic \\ \hline
+      \,      & AP     & 1d8/1d8  & 25 (50 Rnds.) & 1.1kg & Stopped by Class III \\ \hline
+      \,      & HP     & 2d4/2d4  & 25 (50 Rnds.) & 1.0kg & Stopped by Class II, Subsonic \\ \hline
+      4.6x30  & Normal & 2d4/2d4  & 40 (50 Rnds.) & 0.4kg & Stopped by Class III \\ \hline
+      \,      & AP     & 2d4/2d4  & 60 (50 Rnds.) & 0.5kg & Stopped by Class IV \\ \hline
+      \,      & HP     & 2d6/2d6  & 50 (50 Rnds.) & 0.4kg & Stopped by Class II \\ \hline
+      5.7x28  & Normal & 2d4/2d4  & 40 (50 Rnds.) & 0.4kg & Stopped by Class III \\ \hline
+      \,      & AP     & 2d4/2d4  & 60 (50 Rnds.) & 0.5kg & Stopped by Class IV \\ \hline
+      \,      & HP     & 2d6/2d6  & 50 (50 Rnds.) & 0.4kg & Stopped by Class II \\ \hline
+      9x21    & Normal & 2d4/2d4  & 40 (50 Rnds.) & 0.4kg & Stopped by Class III \\ \hline
+      \,      & AP     & 2d4/2d4  & 60 (50 Rnds.) & 0.5kg & Stopped by Class IV \\ \hline
+      \,      & HP     & 2d6/2d6  & 50 (50 Rnds.) & 0.4kg & Stopped by Class II \\ \hline
 
     \end{tabular}
   \end{center}
@@ -119,34 +124,35 @@ kinetic energy transfer to internal organs and tissue.
 
 \begin{table}
   \caption{Rifle cartridges}
+  \label{tab:RifleCartridges}
   \begin{center}
     \begin{tabular}{| l | l | l | l | l | l |}
       \hline
       \textbf{Cartridge}  & \textbf{Type} & \textbf{Damage} &
-      \textbf{Cost}  & \textbf{Notes} \\ \hline
+      \textbf{Cost} & \textbf{Weight} & \textbf{Notes} \\ \hline
 
-      7.62x39  & Normal  & 2d10/2d10  & 70 (30 Rnds.)  & Stopped by Class IV \\ \hline
-      \,       & AP      & 2d10/2d20  & 120 (30 Rnds.) & Stopped by Class V \\ \hline
-      5.56x45  & Normal  & 2d8/2d8    & 80 (30 Rnds.)  & Stopped by Class III \\ \hline
-      \,       & AP      & 2d8/2d8    & 100 (30 Rnds.) & Stopped by Class IV \\ \hline
-      \,       & HP      & 2d10/2d10  & 120 (30 Rnds.) & Stopped by Class III \\ \hline
-      5.45x39  & Normal  & 2d8/2d8    & 70 (30 Rnds.)  & Stopped by Class III \\ \hline
-      \,       & AP      & 2d8/2d8    & 90 (30 Rnds.)  & Stopped by Class IV \\ \hline
-      \,       & HP      & 2d10/2d10  & 110 (30 Rnds.) & Stopped by Class III \\ \hline
-      7.62x51  & Normal  & 2d10/2d10  & 100 (20 Rnds.) & Stopped by Class IV \\ \hline
-      \,       & AP      & 2d10/2d10  & 130 (20 Rnds.) & Stopped by Class V \\ \hline
-      \,       & HP      & 3d6/3d6    & 150 (20 Rnds.) & Stopped by Class IV \\ \hline
-      7.62x54  & Normal  & 2d10/2d10  & 100 (20 Rnds.) & Stopped by Class IV \\ \hline
-      \,       & AP      & 2d10/2d10  & 130 (20 Rnds.) & Stopped by Class V \\ \hline
-      \,       & HP      & 3d6/3d6    & 150 (20 Rnds.) & Stopped by Class IV \\ \hline
-      .50 BMG  & Normal  & 3d10/3d10  & 200 (10 Rnds.) & Stopped by Class VI \\ \hline
-      \,       & AP      & 3d10/3d10  & 250 (10 Rnds.) & Stopped by Class VII \\ \hline
-      \,       & HP      & 3d12/3d12  & 250 (10 Rnds.) & Stopped by Class VI \\ \hline
-      \,       & HEI/AP  & 4d8/4d8    & 350 (10 Rnds.) & Stopped by Class VII \\ \hline
-      12.7x108 & Normal  & 3d10/3d10  & 200 (10 Rnds.) & Stopped by Class VI \\ \hline
-      \,       & AP      & 3d10/3d10  & 250 (10 Rnds.) & Stopped by Class VII \\ \hline
-      \,       & HP      & 3d12/3d12  & 250 (10 Rnds.) & Stopped by Class VI \\ \hline
-      \,       & HEI/AP  & 4d10/4d10  & 350 (10 Rnds.) & Stopped by Class VII \\ \hline
+      7.62x39  & Normal  & 2d10/2d10  & 70 (30 Rnds.)  & 0.5kg & Stopped by Class IV \\ \hline
+      \,       & AP      & 2d10/2d20  & 120 (30 Rnds.) & 0.6kg & Stopped by Class V \\ \hline
+      5.56x45  & Normal  & 2d8/2d8    & 80 (30 Rnds.)  & 0.4kg & Stopped by Class III \\ \hline
+      \,       & AP      & 2d8/2d8    & 100 (30 Rnds.) & 0.5kg & Stopped by Class IV \\ \hline
+      \,       & HP      & 2d10/2d10  & 120 (30 Rnds.) & 0.4kg & Stopped by Class III \\ \hline
+      5.45x39  & Normal  & 2d8/2d8    & 70 (30 Rnds.)  & 0.4kg & Stopped by Class III \\ \hline
+      \,       & AP      & 2d8/2d8    & 90 (30 Rnds.)  & 0.5kg & Stopped by Class IV \\ \hline
+      \,       & HP      & 2d10/2d10  & 110 (30 Rnds.) & 0.4kg & Stopped by Class III \\ \hline
+      7.62x51  & Normal  & 2d10/2d10  & 100 (20 Rnds.) & 0.5kg & Stopped by Class IV \\ \hline
+      \,       & AP      & 2d10/2d10  & 130 (20 Rnds.) & 0.6kg & Stopped by Class V \\ \hline
+      \,       & HP      & 3d6/3d6    & 150 (20 Rnds.) & 0.5kg & Stopped by Class IV \\ \hline
+      7.62x54  & Normal  & 2d10/2d10  & 100 (20 Rnds.) & 0.5kg & Stopped by Class IV \\ \hline
+      \,       & AP      & 2d10/2d10  & 130 (20 Rnds.) & 0.6kg & Stopped by Class V \\ \hline
+      \,       & HP      & 3d6/3d6    & 150 (20 Rnds.) & 0.5kg & Stopped by Class IV \\ \hline
+      .50 BMG  & Normal  & 3d10/3d10  & 200 (10 Rnds.) & 1.1kg & Stopped by Class VI \\ \hline
+      \,       & AP      & 3d10/3d10  & 250 (10 Rnds.) & 1.2kg & Stopped by Class VII \\ \hline
+      \,       & HP      & 3d12/3d12  & 250 (10 Rnds.) & 1.1kg & Stopped by Class VI \\ \hline
+      \,       & HEI/AP  & 4d8/4d8    & 350 (10 Rnds.) & 1.3kg & Stopped by Class VII \\ \hline
+      12.7x108 & Normal  & 3d10/3d10  & 200 (10 Rnds.) & 1.1kg & Stopped by Class VI \\ \hline
+      \,       & AP      & 3d10/3d10  & 250 (10 Rnds.) & 1.2kg & Stopped by Class VII \\ \hline
+      \,       & HP      & 3d12/3d12  & 250 (10 Rnds.) & 1.1kg & Stopped by Class VI \\ \hline
+      \,       & HEI/AP  & 4d10/4d10  & 350 (10 Rnds.) & 1.3kg & Stopped by Class VII \\ \hline
 
     \end{tabular}
   \end{center}
@@ -154,15 +160,16 @@ kinetic energy transfer to internal organs and tissue.
 
 \begin{table}
   \caption{Shotgun shells}
+  \label{tab:ShotgunShells}
   \begin{center}
     \begin{tabular}{| l | l | l | l | l | l |}
       \hline
-      \textbf{Cartridge}  & \textbf{Type}   & \textbf{Piercing} &
-      \textbf{Bludgeoning} & \textbf{Cost}  & \textbf{Notes}        \\ \hline
+      \textbf{Cartridge}  & \textbf{Type}   & \textbf{Damage} &
+      \textbf{Cost} & \textbf{Weight} & \textbf{Notes}        \\ \hline
 
-      12G     & Buckshot & 4d4  & 1d4 & 20 (12 Shells) & Stopped by Class II \\ \hline
-      \,      & Slug     & 3d4  & 2d4 & 25 (12 Shells) & Stopped by Class III \\ \hline
-      \,      & Dart     & 3d4  & 3d4 & 30 (12 Shells) & Stopped by Class III \\ \hline
+      12G     & Buckshot & 4d4/1d4 & 20 (12 Shells) & 0.5kg & Stopped by Class II \\ \hline
+      \,      & Slug     & 3d4/2d4 & 25 (12 Shells) & 0.6kg & Stopped by Class III \\ \hline
+      \,      & Dart     & 3d4/3d4 & 30 (12 Shells) & 0.7kg & Stopped by Class III \\ \hline
 
     \end{tabular}
   \end{center}
@@ -177,18 +184,21 @@ and defense.
 
 Most pistols are semi automatic, feeding from a detachable box magazine.
 
+The weight is given unloaded.
+
 \begin{table}
   \caption{9x18 Handguns}
+  \label{tab:Handguns918}
   \begin{center}
-    \begin{tabular}{| l | l | l | l | l | l | l | l |}
+    \begin{tabular}{| l | l | l | l | l | l | l | l | l |}
       \hline
       \textbf{Name} & \textbf{Cartridge} & \textbf{Range} &
       \textbf{FM} & \textbf{Cap.} & \textbf{Recoil} &
-      \textbf{Cost} & \textbf{Notes} \\ \hline
+      \textbf{Cost} & \textbf{Weight} & \textbf{Notes} \\ \hline
 
-      Makarov PM & 9x18mm & 50m & S & 8  & 1 & 90  & \\ \hline
-      Fort-12    & 9x18mm & 50m & S & 12 & 2 & 160 & \\ \hline
-      MP-448     & 9x18mm & 50m & S & 12 & 2 & 160 & \\ \hline
+      Makarov PM & 9x18mm & 50m & S & 8  & 1 & 90  & 0.7kg & \\ \hline
+      Fort-12    & 9x18mm & 50m & S & 12 & 1 & 160 & 0.8kg & \\ \hline
+      MP-448     & 9x18mm & 50m & S & 12 & 2 & 150 & 0.6kg & \\ \hline
 
     \end{tabular}
   \end{center}
@@ -196,21 +206,22 @@ Most pistols are semi automatic, feeding from a detachable box magazine.
 
 \begin{table}
   \caption{9x19 Handguns}
+  \label{tab:Handguns919}
   \begin{center}
-    \begin{tabular}{| l | l | l | l | l | l | l | l |}
+    \begin{tabular}{| l | l | l | l | l | l | l | l | l |}
       \hline
       \textbf{Name} & \textbf{Cartridge} & \textbf{Range} &
       \textbf{FM} & \textbf{Cap.} & \textbf{Recoil} &
-      \textbf{Cost} & \textbf{Notes} \\ \hline
+      \textbf{Cost} & \textbf{Weight} & \textbf{Notes} \\ \hline
 
-      Walther P99  & 9x19mm & 60m & S  & 17 & 2 & 250 & \\ \hline
-      Steyr M9 A1  & 9x19mm & 50m & S  & 17 & 2 & 230 & \\ \hline
-      H\&K VP9      & 9x19mm & 50m & S  & 15 & 2 & 200 & \\ \hline
-      Glock 17     & 9x19mm & 50m & S  & 17 & 2 & 230 & \\ \hline
-      Glock 18     & 9x19mm & 50m & SA & 33 & 3 & 500 & Select-fire \\ \hline
-      SIG P226     & 9x19mm & 50m & S  & 15 & 2 & 210 & \\ \hline
-      Beretta 92FS & 9x19mm & 50m & S  & 18 & 2 & 260 & \\ \hline
-      MP-443       & 9x19mm & 50m & S  & 18 & 2 & 260 & \\ \hline
+      Walther P99  & 9x19mm & 60m & S  & 17 & 2 & 250 & 0.6kg & \\ \hline
+      Steyr M9 A1  & 9x19mm & 50m & S  & 17 & 2 & 230 & 0.7kg & \\ \hline
+      H\&K VP9     & 9x19mm & 50m & S  & 15 & 2 & 200 & 0.7kg & \\ \hline
+      Glock 17     & 9x19mm & 50m & S  & 17 & 2 & 230 & 0.6kg & \\ \hline
+      Glock 18     & 9x19mm & 50m & SA & 33 & 3 & 500 & 0.6kg & Select-fire \\ \hline
+      SIG P226     & 9x19mm & 50m & S  & 15 & 2 & 210 & 0.9kg & \\ \hline
+      Beretta 92FS & 9x19mm & 50m & S  & 18 & 2 & 260 & 0.9kg & \\ \hline
+      MP-443       & 9x19mm & 50m & S  & 18 & 2 & 260 & 0.9kg & \\ \hline
 
     \end{tabular}
   \end{center}
@@ -218,17 +229,18 @@ Most pistols are semi automatic, feeding from a detachable box magazine.
 
 \begin{table}
   \caption{.45ACP Handguns}
+  \label{tab:Handguns45}
   \begin{center}
-    \begin{tabular}{| l | l | l | l | l | l | l | l |}
+    \begin{tabular}{| l | l | l | l | l | l | l | l | l |}
       \hline
       \textbf{Name} & \textbf{Cartridge} & \textbf{Range} &
       \textbf{FM} & \textbf{Cap.} & \textbf{Recoil} &
-      \textbf{Cost} & \textbf{Notes} \\ \hline
+      \textbf{Cost} & textbf{Weight} & \textbf{Notes} \\ \hline
 
-      M1911        & .45 ACP & 50m & S &  7 & 3  & 150 & \\ \hline
-      H\&K USP      & .45 ACP & 60m & S & 12 & 3  & 350 & \\ \hline
-      Hi-Point JHP & .45 ACP & 50m & S & 10 & 3  & 250 & \\ \hline
-      Glock 21     & .45 ACP & 50m & S & 13 & 3  & 250 & \\ \hline
+      M1911        & .45 ACP & 50m & S &  7 & 3  & 150 & 1.1kg & \\ \hline
+      H\&K USP     & .45 ACP & 60m & S & 12 & 3  & 350 & 0.8kg & \\ \hline
+      Hi-Point JHP & .45 ACP & 50m & S & 10 & 3  & 250 & 0.9kg & \\ \hline
+      Glock 21     & .45 ACP & 50m & S & 13 & 4  & 250 & 0.8kg & \\ \hline
 
     \end{tabular}
   \end{center}
@@ -237,25 +249,26 @@ Most pistols are semi automatic, feeding from a detachable box magazine.
 \subsection{Shotguns}
 
 Most shotguns are of the pump-action variety and come with an internal tube that
-holds a fixed amount of ammunition. The TOS-34 is a stand in for most break-top
+holds a fixed amount of ammunition. The TOZ-34 is a stand in for most break-top
 shotguns (regardless of many barrels they have). There are simply too many to
 list them all.
 
 \begin{table}
+  \label{tab:Shotguns}
   \caption{Shotguns}
   \begin{center}
-    \begin{tabular}{| l | l | l | l | l | l | l | l |}
+    \begin{tabular}{| l | l | l | l | l | l | l | l | l |}
       \hline
       \textbf{Name} & \textbf{Cartridge} & \textbf{Range} &
       \textbf{FM} & \textbf{Cap.} & \textbf{Recoil} &
-      \textbf{Cost} & \textbf{Notes} \\ \hline
+      \textbf{Cost} & \textbf{Weight} & \textbf{Notes} \\ \hline
 
-      Remington M870 & 12G & 90m & S  & 7+1 & 4 & 310 & Pump-action, tube \\ \hline
-      Mossberg 500   & 12G & 90m & S  & 8+1 & 4 & 350 & Pump-action, tube \\ \hline
-      TOS-34         & 12G & 100 & S  & 2   & 4 & 110 & Double-barrel \\ \hline
-      SPAS-12        & 12G & 80m & SA & 8+1 & 5 & 400 & Internal tube \\ \hline
-      AA-12          & 12G & 70m & SA & 10  & 3 & 600 & \\ \hline
-      Saiga-12       & 12G & 70m & SA & 10  & 4 & 550 & \\ \hline
+      Remington M870 & 12G & 90m & S  & 7+1 & 4 & 310 & 3.6kg & Pump-action, tube \\ \hline
+      Mossberg 500   & 12G & 90m & S  & 8+1 & 4 & 350 & 3.4kg & Pump-action, tube \\ \hline
+      TOZ-34         & 12G & 100 & S  & 2   & 4 & 110 & 3.3kg & Double-barrel \\ \hline
+      SPAS-12        & 12G & 80m & SA & 8+1 & 5 & 400 & 4.2kg & Internal tube \\ \hline
+      AA-12          & 12G & 70m & SA & 10  & 3 & 600 & 5.2kg & \\ \hline
+      Saiga-12       & 12G & 70m & SA & 10  & 4 & 550 & 3.6kg & \\ \hline
 
     \end{tabular}
   \end{center}
@@ -269,21 +282,24 @@ security detail that need a compact but deadly and efficient weapon.
 
 \begin{table}
   \caption{Submachine Guns}
+  \label{tab:SMG}
   \begin{center}
-    \begin{tabular}{| l | l | l | l | l | l | l | l |}
+    \begin{tabular}{| l | l | l | l | l | l | l | l | l |}
       \hline
       \textbf{Name} & \textbf{Cartridge} & \textbf{Range} &
       \textbf{FM} & \textbf{Cap.} & \textbf{Recoil} &
-      \textbf{Cost} & \textbf{Notes} \\ \hline
+      \textbf{Cost} & \textbf{Weight} & \textbf{Notes} \\ \hline
 
-      MP5            & 9x19   & 150m & SBA & 30 & 3 & 500 & \\ \hline
-      UMP-45         & .45ACP &  70m & SBA & 25 & 5 & 600 & \\ \hline
-      MP7A1          & 4.6x30 & 200m & SA  & 30 & 3 & 750 & \\ \hline
-      FN P90         & 5.7x28 & 200m & SA  & 50 & 3 & 800 & \\ \hline
-      SR-2M          & 9x21   & 200m & SA  & 30 & 3 & 750 & \\ \hline
-      Scorpion EVO 3 & 9x19   & 100m & SA  & 30 & 3 & 600 & \\ \hline
-      KRISS Vector   & .45ACP &  60m & SA  & 25 & 3 & 700 & \\ \hline
-      SIG MPX        & 9x19   &  90m & SA  & 30 & 3 & 550 & \\ \hline
+      MP5            & 9x19   & 150m & SBA & 30 & 3 & 500 & 2.5kg & \\ \hline
+      Scorpion EVO 3 & 9x19   & 100m & SA  & 30 & 3 & 600 & 2.0kg & \\ \hline
+
+      UMP-45         & .45ACP &  70m & SBA & 25 & 5 & 600 & 2.2kg & \\ \hline
+      KRISS Vector   & .45ACP &  60m & SA  & 25 & 3 & 700 & 2.7kg & \\ \hline
+
+      MP7A1          & 4.6x30 & 200m & SA  & 30 & 3 & 750 & 1.2kg & \\ \hline
+      FN P90         & 5.7x28 & 200m & SA  & 50 & 3 & 800 & 2.6kg & \\ \hline
+      SR-2M          & 9x21   & 200m & SA  & 30 & 3 & 750 & 1.6kg & \\ \hline
+      SIG MPX        & 9x19   &  90m & SA  & 30 & 3 & 550 & 2.7kg & \\ \hline
 
     \end{tabular}
   \end{center}
@@ -302,31 +318,32 @@ cycle anymore and loose half of its effective range.
 
 \begin{table}
   \caption{Assault Rifles}
+  \label{tab:AssaultRifles}
   \begin{center}
-    \begin{tabular}{| l | l | l | l | l | l | l | l |}
+    \begin{tabular}{| l | l | l | l | l | l | l | l | l |}
       \hline
       \textbf{Name} & \textbf{Cartridge} & \textbf{Range} &
       \textbf{FM} & \textbf{Cap.} & \textbf{Recoil} &
-      \textbf{Cost} & \textbf{Notes} \\ \hline
+      \textbf{Cost} & \textbf{Weight} & \textbf{Notes} \\ \hline
 
-      SA Vz. 58    & 7.62x39 & 500m & SA  & 30 & 6 & 500 & \\ \hline
-      AKM          & 7.62x39 & 350m & SA  & 30 & 7 & 300 & \\ \hline
+      SA Vz. 58    & 7.62x39 & 500m & SA  & 30 & 6 & 500 & 2.9kg & \\ \hline
+      AKM          & 7.62x39 & 350m & SA  & 30 & 7 & 300 & 3.1kg & \\ \hline
 
-      M16          & 5.56x45 & 550m & SB  & 30 & 5 & 450 & \\ \hline
-      Steyr AUG A3 & 5.56x45 & 500m & SA  & 30 & 6 & 300 & \\ \hline
-      CZ-805 BREN  & 5.56x45 & 500m & SA  & 30 & 5 & 400 & \\ \hline
-      H\&K G36     & 5.56x45 & 600m & SA  & 30 & 5 & 450 & \\ \hline
-      M4A1         & 5.56x45 & 450m & SA  & 30 & 5 & 500 & \\ \hline
-      H\&K 416     & 5.56x45 & 500m & SA  & 30 & 5 & 550 & \\ \hline
+      M16          & 5.56x45 & 550m & SB  & 30 & 5 & 450 & 3.2kg & \\ \hline
+      Steyr AUG A3 & 5.56x45 & 500m & SA  & 30 & 6 & 300 & 3.6kg & \\ \hline
+      CZ-805 BREN  & 5.56x45 & 500m & SA  & 30 & 5 & 400 & 3.6kg & \\ \hline
+      H\&K G36     & 5.56x45 & 600m & SA  & 30 & 5 & 450 & 3.6kg & \\ \hline
+      M4A1         & 5.56x45 & 450m & SA  & 30 & 5 & 500 & 2.8kg & \\ \hline
+      H\&K 416     & 5.56x45 & 500m & SA  & 30 & 5 & 550 & 3.5kg & \\ \hline
 
-      AK-12        & 5.45x39 & 600m & SB(2)A & 30 & 5 & 660 & \\ \hline
-      AK-74M       & 5.45x39 & 500m & SA     & 30 & 5 & 550 & \\ \hline
-      AKS-74U      & 5.45x39 & 350m & SA     & 30 & 5 & 450 & \\ \hline
-      AN-94        & 5.45x38 & 600m & SB(2)A & 30 & 5 (1) & 900 & \\ \hline
+      AK-12        & 5.45x39 & 600m & SB(2)A & 30 & 5 & 660 & 3.3kg & \\ \hline
+      AK-74M       & 5.45x39 & 500m & SA     & 30 & 5 & 550 & 3.4kg & \\ \hline
+      AKS-74U      & 5.45x39 & 350m & SA     & 30 & 5 & 450 & 2.7kg & \\ \hline
+      AN-94        & 5.45x38 & 600m & SB(2)A & 30 & 5 (1) & 900 & 3.8kg & \\ \hline
 
-      OTs-14       & 9x39mm  & 300m & SA     & 20 & 4 & 800 & \\ \hline
-      AS Val       & 9x39mm  & 300m & SA     & 20 & 4 & 900 & \\ \hline
-      SR-3         & 9x39mm  & 200m & SA     & 20 & 4 & 700 & \\ \hline
+      OTs-14       & 9x39mm  & 300m & SA     & 20 & 4 & 800 & 2.7kg & \\ \hline
+      AS Val       & 9x39mm  & 300m & SA     & 20 & 4 & 900 & 2.5kg & \\ \hline
+      SR-3         & 9x39mm  & 200m & SA     & 20 & 4 & 700 & 2.0kg & \\ \hline
 
     \end{tabular}
   \end{center}
@@ -335,28 +352,29 @@ cycle anymore and loose half of its effective range.
 
 \begin{table}
   \caption{High-Caliber Rifles}
+  \label{tab:Rifles}
   \begin{center}
-    \begin{tabular}{| l | l | l | l | l | l | l | l |}
+    \begin{tabular}{| l | l | l | l | l | l | l | l | l |}
       \hline
       \textbf{Name} & \textbf{Cartridge} & \textbf{Range} &
       \textbf{FM} & \textbf{Cap.} & \textbf{Recoil} &
-      \textbf{Cost} & \textbf{Notes} \\ \hline
+      \textbf{Cost} & \textbf{Weight} & \textbf{Notes} \\ \hline
 
 
-      H\&K 417      & 7.62x51  &  700m & SA & 20 & 7  &  700 & \\ \hline
-      Mk 14 EBR     & 7.62x51  &  800m & SA & 20 & 7  &  750 & \\ \hline
-      Galil ACE 53  & 7.62x51  &  600m & SA & 20 & 7  &  650 & \\ \hline
-      FN SCAR-H     & 7.62x51  &  800m & SA & 20 & 7  &  700 & \\ \hline
-      M40A5         & 7.62x51  &  800m & SA & 10 & 8  &  600 & \\ \hline
+      H\&K 417      & 7.62x51  &  700m & SA & 20 & 7  &  700 & 3.8kg & \\ \hline
+      Mk 14 EBR     & 7.62x51  &  800m & SA & 20 & 7  &  750 & 5.1kg & \\ \hline
+      Galil ACE 53  & 7.62x51  &  600m & SA & 20 & 7  &  650 & 3.8kg & \\ \hline
+      FN SCAR-H     & 7.62x51  &  800m & SA & 20 & 7  &  700 & 3.5kg & \\ \hline
+      M40A5         & 7.62x51  &  800m & S  & 10 & 8  &  600 & 6.5kg & bolt-action \\ \hline
 
-      SVD           & 7.62x54  &  800m & S  & 20 & 8  &  500 & \\ \hline
-      SVU           & 7.62x54  & 1000m & S  & 20 & 8  &  700 & \\ \hline
+      SVD           & 7.62x54  &  800m & S  & 20 & 8  &  500 & 4.3kg & \\ \hline
+      SVU           & 7.62x54  & 1000m & S  & 20 & 8  &  700 & 3.6kg & \\ \hline
 
-      Barret M82    & .50 BMG  & 1800m & S  & 10 & 12 & 1100 & \\ \hline
-      Steyr HS .50  & .50 BMG  & 1800m & S  &  1 & 11 &  900 & \\ \hline
+      Barret M82    & .50 BMG  & 1800m & S  & 10 & 12 & 1100 & 14.0kg \\ \hline
+      Steyr HS .50  & .50 BMG  & 1800m & S  &  1 & 11 &  900 & 12.4kg \\ \hline
 
-      OSV-96        & 12.7x108 & 2000m & S  &  5 & 12 & 1300 & \\ \hline
-      KSVK          & 12.7x108 & 1500m & S  &  5 & 12 & 1200 & \\ \hline
+      OSV-96        & 12.7x108 & 2000m & S  &  5 & 12 & 1300 & 12.9kg \\ \hline
+      KSVK          & 12.7x108 & 1500m & S  &  5 & 12 & 1200 & 12.5kg \\ \hline
     \end{tabular}
   \end{center}
 \end{table}
@@ -373,18 +391,19 @@ Most belt fed machien guns feed from a chain, which either disintegrates after
 being fired or not. If it doesn't disintegrate it can be refilled.
 
 \begin{table}
-  \caption{High-Caliber Rifles}
+  \caption{Machine Guns}
+  \label{tab:LMG}
   \begin{center}
-    \begin{tabular}{| l | l | l | l | l | l | l | l |}
+    \begin{tabular}{| l | l | l | l | l | l | l | l | l |}
       \hline
       \textbf{Name} & \textbf{Cartridge} & \textbf{Range} &
       \textbf{FM} & \textbf{Cap.} & \textbf{Recoil} &
-      \textbf{Cost} & \textbf{Notes} \\ \hline
+      \textbf{Cost} & \textbf{Weight} & \textbf{Notes} \\ \hline
 
 
-      H\&K MG4     & 5.56x45 &  500m & SA & 100 & 5 & 1200 & \\ \hline
-      FN 240B      & 7.61x51 &  800m & SA & 100 & 9 & 1500 & \\ \hline
-      PKP Pecheneg & 7.62x54 & 1200m & SA & 100 & 9 & 2100 & \\ \hline
+      H\&K MG4      & 5.56x45 &  500m & SA & 100 & 5 & 1200 &  8.5kg & \\ \hline
+      FN MAG (M240) & 7.61x51 &  800m & SA & 100 & 9 & 1500 & 12.5kg & \\ \hline
+      PKP Pecheneg  & 7.62x54 & 1200m & SA & 100 & 9 & 2100 &  8.2kg & \\ \hline
 
     \end{tabular}
   \end{center}
@@ -409,20 +428,21 @@ All plates require a carrier.
 
 \begin{table}
   \caption{Armour}
+  \label{tab:Armour}
   \begin{center}
-    \begin{tabular}{| l | l | l | l | l |}
+    \begin{tabular}{| l | l | l | l | l | l |}
 
       \hline
       \textbf{Armour} & \textbf{Class} & \textbf{HP} &
-      \textbf{Cost} & \textbf{Notes} \\ \hline
+      \textbf{Cost} & \textbf{Weight} & \textbf{Notes} \\ \hline
 
-      Kevlar Vest     &  II & 40 & 150 & \\ \hline
-      Plate Class I   &   I & 30 & 100 & \\ \hline
-      Plate Class II  &  II & 40 & 150 & \\ \hline
-      Plate Class III & III & 50 & 250 & \\ \hline
-      Plate Class IV  &  IV & 60 & 350 & \\ \hline
-      Plate Class V   &   V & 70 & 450 & \\ \hline
-      Plate Class VI  &  VI & 80 & 550 & \\ \hline
+      Kevlar Vest     &  II & 40 & 150 & 1.5kg & \\ \hline
+      Plate Class I   &   I & 30 & 100 & 1.5kg & \\ \hline
+      Plate Class II  &  II & 40 & 150 & 2.0kg & \\ \hline
+      Plate Class III & III & 50 & 250 & 3.0kg & \\ \hline
+      Plate Class IV  &  IV & 60 & 350 & 3.5kg & \\ \hline
+      Plate Class V   &   V & 70 & 450 & 3.8kg & \\ \hline
+      Plate Class VI  &  VI & 80 & 550 & 4.3kg & \\ \hline
 
     \end{tabular}
   \end{center}
@@ -443,14 +463,16 @@ between four and six seconds.
 
 \begin{table}
   \caption{Fragmentation Grenades}
+  \label{tab:Frag}
   \begin{center}
-    \begin{tabular}{| l | l | l | l | l | l |}
+    \begin{tabular}{| l | l | l | l | l | l | l |}
 
       \hline
-      \textbf{Name} & \textbf{Damage} & \textbf{Cost} & \textbf{Range} \\ \hline
+      \textbf{Name} & \textbf{Damage} & \textbf{Cost} &
+      \textbf{Weight} & \textbf{Range} \\ \hline
 
-      F1 Grenade  & 6d6 piercing/6d6 bludgeoning & 250 & 30m \\ \hline
-      M67         & 6d6 piercing/6d6 bludgeoning & 250 & 30m \\ \hline
+      F1 Grenade  & 6d6 piercing/6d6 bludgeoning & 250 & 0.6kg & 30m \\ \hline
+      M67         & 6d6 piercing/6d6 bludgeoning & 250 & 0.8kg & 30m \\ \hline
 
     \end{tabular}
   \end{center}
@@ -470,15 +492,16 @@ actions.
 
 \begin{table}
   \caption{Non-lethal Grenades}
+  \label{tab:NonlethalGrenades}
   \begin{center}
-    \begin{tabular}{| l | l | l | l | l | l |}
+    \begin{tabular}{| l | l | l | l | l | l | l |}
 
       \hline
-      \textbf{Name} & \textbf{Note} & \textbf{Cost} & \textbf{Range} \\ \hline
+      \textbf{Name} & \textbf{Note} & \textbf{Cost} & \textbf{Weight} & \textbf{Range} \\ \hline
 
-      Stun grenade  & Applies \emph{blinded} and \emph{deafened} for 2d4 actions. & 300 & 30m \\ \hline
-      Smoke grenade & Blocks line of sight, except thermal imaging. & 200 & 30m \\ \hline
-      Sting ball grenade & Applies \emph{stunned} for 2d4 actions. & 300 & 30m \\ \hline
+      Stun grenade  & Applies \emph{blinded} and \emph{deafened} for 2d4 actions. & 300 & 0.7kg & 30m \\ \hline
+      Smoke grenade & Blocks line of sight, except thermal imaging. & 200 & 0.5kg & 30m \\ \hline
+      Sting ball grenade & Applies \emph{stunned} for 2d4 actions. & 300 & 0.8kg & 30m \\ \hline
 
     \end{tabular}
   \end{center}
