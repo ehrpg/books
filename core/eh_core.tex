@@ -1,6 +1,7 @@
 \documentclass[11pt,a4paper,openany]{scrbook}
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{color}
+\usepackage{xcolor}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{multicol}
@@ -10,12 +11,23 @@
 \usepackage{amsmath}
 \usepackage{mathtools}
 
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+
 \begin{document}
 
 \include{commands}
 
-\title{Endless Horizons}
-\author{Johannes Zwirchmayr, Florian Stinglmayr}
+\title{Endless Horizons \\
+ \large An role playing system for SciFi settings}
+
+ \author{Johannes Zwirchmayr, Florian Stinglmayr}
+\date{10th December 2015}
 \maketitle
 
 \chapter{Licence}
