@@ -3,7 +3,7 @@ BOOKS := core
 all: ${BOOKS}
 
 $(BOOKS):
-	make -C $@ -I$(CURDIR)
+	$(MAKE) -C $@ -I$(CURDIR)
 
 clean:
 	git clean -Xf
