@@ -4,7 +4,9 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{multicol}
+\usepackage{caption}
 \usepackage{hyperref}
+\usepackage{bookmark}
 \usepackage{mdframed}
 \usepackage{verbatimbox}
 \usepackage{amsmath}
@@ -17,6 +19,18 @@
   citecolor={blue!50!black},
   urlcolor={blue!80!black}
 }
+
+\captionsetup{singlelinecheck=off}
+\makeatletter
+\DeclareCaptionTextFormat{Tablebookmark}{%
+  \bookmark[
+    rellevel=1,
+    keeplevel,
+    dest=\@currentHref,
+  ]{Table \thetable: #1}%
+  #1%
+}
+\captionsetup[table]{textformat=Tablebookmark,justification=centering}
 
 \begin{document}
 
