@@ -1,21 +1,16 @@
 \chapter{Vessels}
 \label{chap:Vessels}
 
-% Spacecrafts only for now.
-
-
 \section{Definition}
 \label{sec:Vessels-Definition}
 
-A vessel is a highly customizable craft that fulfills a purpose, usually things like transport, expedition, scouting, security or war. The chassis is the foundation for any vessel and is essentially a frame that outlines the shape, amount of slots, etc.
+A vessel is a highly customizable craft that fulfills one or more purposes, usually things like transport, expedition, scouting, security or war. The chassis is the foundation for any vessel and esentially defines how strong, fast and big a vessel can get. The chassis itself does not have any functions - it just tells the user or creator of a vessel, what amount of different components can fit onto the vessel.
 
 \section{Components}
 \label{sec:Vessels-Components}
 
-Components define a vessel and are subdivided into the following four categories:
-
 \begin{description}
-  \item[Armor] Armor platings can be used to further enhance a ships durability in battle or hazardous environment.
+  \item[Armour] Armour platings can be used to further enhance a ships durability in battle or hazardous environment.
   \item[Rooms] Rooms are only found on larger vessels. This category includes rooms like the crew quarter, medic bay, cargo bay, engine room, bridge, etc.
   \item[Subsystems] This category is used for everything, that doesn't fit in any of the other categories. They include shield generators, warp drives, engines, fuel tanks, but also components like the cargo hatch can be found in this category.
   \item[Weapons] Weapons can range from simple cannons to complex missile launchers, railguns, etc. Also, ammo is included in this category.
@@ -29,22 +24,78 @@ A component and it's purpose are defined by multiple stats. These stats can diff
   \item[Hitpoints] Every component's condition is descriped by it's hitpoints. If a component is damaged, so that it doesn't have it maximum hitpoints anymore, it's usually disabled, temporarily destroyed, but it can still be repaired. If its hitpoints are brought to 0, the component counts as destroyed and cannot be made operational again. Some components may have secondary effects when destroyed. F.e. if the ammo dump of a vessel is destroyed, as in brought to 0 hitpoints, there is a chance that the remaining ammo will explode which would not only deplet the enemies ammo, but also cause additional damage to the vessel.
 \end{description}
 
+\subsection{Armour}
+\label{sub:Vessel-Armour}
+
+\subsection{Subsystems}
+\label{sub:Vessel-Subsystems}
+
+\subsection{Weapons}
+\label{sub:Vessel-Weapons}
+
+The most important stats for any weapon are the damage and the damage type. There are two different types of damage, one being the kinetic damage, the other being energy damage. Kinetic weapons are all weapons that use a projectile like rail guns, gatling guns, while energy weapons usually utilize heat or electricity to damage an opponent.
+
+Weapons on vessel usually bear such devestating force, that any living creature under direct fire, no matter if it's armored or not, has no chance of survival when hit. The damage of these weapons is much lower compared to f.e. small arms, so the DM and the player dont have to roll tens of dice for simple weapons just to determine the damage dealt.
+
+On the otherhand, normal weapons do not deal any damage to vessels. It doesn't even matter if it's AP, HEI/AP ammunition. Only light and heavy weapons are able to deal damage to vessels, but not in general. A rule of thumb is though, that weapons that use the same cartridges as vessel weapons are able to deal damage to vessels as long as they fire AP or HEI/AP ammunition.
+
+% \begin{table}
+%   \caption{Kinetic vessel weapons}
+%   \label{fig:Vessels-kinetic-weapons}
+%     \begin{tabular}{|l|l|l|l|l|l|}
+%     \hline
+%     Name                        & Cartridge & Range  & Ammo used per action & Cost & Weight \\ \hline
+%     \multicolumn{6}{|l|}{Gatling guns} \\ \hline
+%     GAU-19                      & .50 BMG   & 1800 m & 25                   & ~    & ~      \\ \hline
+%     M61 Vulcan                  & 20mm      & 7000 m & 100                  & ~    & ~      \\ \hline
+%     Grjasew-Schipunow GSch-6-23 & 23mm      & 5000 m & 150                  & ~    & ~      \\ \hline
+%     GAU-12 Equalizer            & 25mm      & 4500 m & 70                   & ~    & ~      \\ \hline
+%     GAU-8 Avenger               & 30mm      & 1220 m & 60                   & ~    & ~      \\ \hline
+%     \multicolumn{6}{|l|}{Railgun} \\ \hline
+%     Railgun MK I                & 12,7cm    & 177 km & 1                    & ~    & ~      \\ \hline
+%     Railgun MK II               & 45,72cm   & 200 km & 1                    & ~    & ~      \\ \hline
+%     \multicolumn{6}{|l|}{Missile Launcher} \\ \hline
+%     ~                           & ~         & ~      & ~                    & ~    & ~      \\ \hline
+%     ~                           & ~         & ~      & ~                    & ~    & ~      \\ \hline
+%     ~                           & ~         & ~      & ~                    & ~    & ~      \\ \hline
+%     ~                           & ~         & ~      & ~                    & ~    & ~      \\ \hline
+%     \end{tabular}
+% \end{table}
+
+\section{Fire Arcs}
+\label{sec:Vessels-Fire-Arcs}
+
+The space around the ship is divided into 4 90 degree arcs in a two dimensional space. In three dimensions the arcs have an additional 90 degree span up and down respectively. The arcs are labelled clockwise, starting in the front:
+
+\begin{itemize}
+  \item Fore Arc
+  \item Starboard Arc
+  \item Aft Arc
+  \item Port Arc
+\end{itemize}
+
+\section{Weapon Batteries}
+\label{sec:Vessels-Weapon-Batteries}
+
+Any vessel can have mounts for one or multiple weapons, commonly referred to as battery or weapon battery. These mounts serve as platform for multiple weapons - they don't necessarily need to be of the same type, although this is very often the case. A weapon battery can be located anywhere on the ship, but usually the chassis dictates where a weapon mount is located.
+
+\subsection{Battery Bearing}
+\label{sub:Vessels-Battery-Bearing}
+
+The bearing of a battery defines in which arcs a battery can fire at. Usually, either the front or the side arcs have the main weaponry, while the back is only sparsely outfitted. A spaceship f.e. may have fighter or bomber defense in the rear, but no larger weaponry.
 
 \section{Identifying Vessels}
 \label{sec:Vessels-Identifying Vessels}
 
-Any vessel can be uniquely assembled, although most ships are created in mass production. In the latter case, it's very easy to identify which components a vessel has or not. Otherwise, scanners, espionage and the like might shed some light on the exact vessel composition. Components, such as \emph{rooms}, can only be identified when boarding or hacking the vessel.
+Any vessel can be uniquely assembled, although most ships are created in mass production. So if a character knows about a vessel in more detail, he can assume that the vessel in question has exactly those components. Otherwise, scanners, espionage and the like might shed some light on the exact vessel composition. Components, such as \emph{rooms}, can only be identified when boarding or hacking the vessel, although the bridge is almost always visually distinguishable from the outside.
 
 \section{Combat}
 \label{sec:Vessels-Combat}
 
-The combat in space with vessely is very similiar to the rules described in Chapter~\ref{chap:Combat}, unless otherwise noted.
+The combat with vessels is very similiar to the rules described in Chapter~\ref{chap:Combat}, unless otherwise noted.
 
-The attacker can choose to attack the vessel directly or aim to destroy or disable any component the vessel may have. The vessel itself is usually way more durable than any components, so attacking certain components might prove very useful.
+All the weapons from any battery can be fired by an AI or a character. F.e. a spaceship with 3 batteries may have two people operating a battery each, while the third battery is operated by a targetting AI. Roll an attack for every weapon in a battery, then roll the damage for any weapon that hit it's target. Since larger ships have more weapons and multiple batteries, you can use a flat damage instead, so you skip the part of rolling damage and take an average of the damage you would normally do.
 
-Any pilot of a highly maneuverable vessel can use his \emph{Dogfighting} skill to try and evade an enemy attack before it happens. Likewise, the attacker can use the exact some skill to determine, if he outmaneuvers his target and is thusly able to get a clear shot. If the attacker he success, he attackes as usual, if he fails the contest, he cannot shot at his enemy.
+The attacker can choose to attack the vessel directly or aim at any other component the vessel may have. If the attacker aims at a component the vessel doesn't have, the vessel is attacked directly instead. The vessel itself is usually way more durable than any components, so attacking certain components might prove much more useful.
 
-Any vessel that is to bulky, large or sluggish to actively evade an oncoming attacking can be attacked directly as usual.
-
-% TODO
-DRAFT: In the case that a high maneuverable vessel attacks a large, sluggish one, the pilot of the high maneuverable vessel can add his  piloting skill to the DC the attacker has to beat when being attacked.
+If the attacked vessel is too large, slow, bulky or simply not maneuverable enough, your attack automatically hits, disregarding the maneuverability of your vessel.
