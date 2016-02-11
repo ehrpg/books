@@ -29,7 +29,7 @@ A component and it's purpose are defined by multiple stats. These stats can diff
     \item The component is destroyed.
     \item The component is destroyed by its secondary effect.
   \end{itemize}
-   If its hitpoints are brought to 0, the component counts as destroyed and cannot be made operational again. Some components may have secondary effects when destroyed. F.e. if the ammo dump of a vessel is destroyed, as in brought to 0 hitpoints, there is a chance that the remaining ammo will explode which would not only deplet the enemies ammo, but also cause additional damage to the vessel.
+  If its hitpoints are brought to 0, the component counts as destroyed and cannot be made operational again. Some components may have secondary effects when destroyed. F.e. if the ammo dump of a vessel is destroyed, as in brought to 0 hitpoints, there is a chance that the remaining ammo will explode which would not only deplet the enemies ammo, but also cause additional damage to the vessel.
 \end{description}
 
 \subsection{Armour}
@@ -45,6 +45,7 @@ A component and it's purpose are defined by multiple stats. These stats can diff
   \item[Engine room]
   \item[Hangar]
   \item[Hydroponics]
+  \item[Observation]
   \item[Sick bay]
 \end{description}
 
@@ -73,7 +74,7 @@ A component and it's purpose are defined by multiple stats. These stats can diff
 
 The most important stats for any weapon are the damage and the damage type. There are two different types of damage, one being the kinetic damage, the other being energy damage. Kinetic weapons are all weapons that use a projectile like rail guns, gatling guns, while energy weapons usually utilize heat or electricity to damage an opponent.
 
-Weapons on vessel usually bear such devestating force, that any living creature under direct fire, no matter if it's armored or not, has no chance of survival when hit. The damage of these weapons is much lower compared to f.e. small arms, so the DM and the player dont have to roll tens of dice for simple weapons just to determine the damage dealt.
+Weapons on vessel usually bear such devestating force, that any living creature under direct fire, no matter if it's armored or not, has no chance of survival when hit. The damage of these weapons is much lower compared to f.e. small arms, so the DM and the players dont have to roll tens of dice for simple weapons just to determine the damage dealt.
 
 On the otherhand, normal weapons do not deal any damage to vessels. It doesn't even matter if it's AP, HEI/AP ammunition. Only light and heavy weapons are able to deal damage to vessels, but not in general. A rule of thumb is though, that weapons that use the same cartridges as vessel weapons are able to deal damage to vessels as long as they fire AP or HEI/AP ammunition.
 
@@ -103,7 +104,7 @@ On the otherhand, normal weapons do not deal any damage to vessels. It doesn't e
 \section{Fire Arcs}
 \label{sec:Vessels-Fire-Arcs}
 
-The space around the ship is divided into 4 90 degree arcs in a two dimensional space. In three dimensions the arcs have an additional 90 degree span up and down respectively. The arcs are labelled clockwise, starting in the front:
+The space around a vessel is divided into 4 90 degree arcs in a two dimensional space. In three dimensions the arcs have an additional 90 degree span up and down respectively. The arcs are labelled clockwise, starting in the front:
 
 \begin{itemize}
   \item Fore Arc
@@ -125,7 +126,7 @@ The bearing of a battery defines in which arcs a battery can fire at. Usually, e
 \section{Identifying Vessels}
 \label{sec:Vessels-Identifying Vessels}
 
-Any vessel can be uniquely assembled, although most ships are created in mass production. So if a character knows about a vessel in more detail, he can assume that the vessel in question has exactly those components. Otherwise, scanners, espionage and the like might shed some light on the exact vessel composition. Components, such as \emph{rooms}, can only be identified when boarding or hacking the vessel, although the bridge is almost always visually distinguishable from the outside.
+Any vessel can be uniquely assembled, although most vessels are created in mass production. So if a character knows about a vessel in more detail, he can assume that the vessel in question has exactly those components. Otherwise, scanners, espionage and the like might shed some light on the exact vessel composition. Components, such as \emph{rooms}, can only be identified when boarding or hacking the vessel, although the bridge or cockpit is almost always visually distinguishable from the outside.
 
 \chapter{Vessel Combat}
 \label{chap:Vessel-Combat}
@@ -210,7 +211,7 @@ Combat takes place in turns. A player may make two actions per turn. While norma
 \subsection{Boarding}
 \label{sub:Vessels-Combat-Combat-Phase-Boarding}
 
-The pilots of two vessels make oppossed check. If the attacker wins, boarding is initiated, if the defender wins, the boarding attempt fails. Pilots of smaller, lighter and thus faster vessels have an advantage over slower ones, which influences the penalties or bonuses respectively.
+The pilots of two vessels make oppossed piloting checks. If the attacker wins, boarding is initiated, if the defender wins, the boarding attempt fails. Pilots of smaller, lighter and thus faster vessels have an advantage over slower ones, which influences the penalties or bonuses respectively.
 
 If the boarding attempt was successful, switch to normal combat rules.
 % TODO Faster boarding result determination
