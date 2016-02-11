@@ -21,7 +21,15 @@ A component and it's purpose are defined by multiple stats. These stats can diff
 \begin{description}
   \item[Size] The size tells you the minimum size of the slot the vessel requires. You cannot, f.e., add a medium component to a small ship.
   \item[Slots] The amount of slots that are needed to install the component needs.
-  \item[Hitpoints] Every component's condition is descriped by it's hitpoints. If a component is damaged, so that it doesn't have it maximum hitpoints anymore, it's usually disabled, temporarily destroyed, but it can still be repaired. If its hitpoints are brought to 0, the component counts as destroyed and cannot be made operational again. Some components may have secondary effects when destroyed. F.e. if the ammo dump of a vessel is destroyed, as in brought to 0 hitpoints, there is a chance that the remaining ammo will explode which would not only deplet the enemies ammo, but also cause additional damage to the vessel.
+  \item[Hitpoints] Every component's condition is descriped by it's hitpoints. If a component is damaged, so that it doesn't have it maximum hitpoints anymore, it becomes instable. Using an instable component bears the following results:
+  \begin{itemize}
+    \item The component functions normally.
+    \item The component does not work as intended.
+    \item The component does not work at all.
+    \item The component is destroyed.
+    \item The component is destroyed by its secondary effect.
+  \end{itemize}
+   If its hitpoints are brought to 0, the component counts as destroyed and cannot be made operational again. Some components may have secondary effects when destroyed. F.e. if the ammo dump of a vessel is destroyed, as in brought to 0 hitpoints, there is a chance that the remaining ammo will explode which would not only deplet the enemies ammo, but also cause additional damage to the vessel.
 \end{description}
 
 \subsection{Armour}
@@ -32,8 +40,10 @@ A component and it's purpose are defined by multiple stats. These stats can diff
 
 \begin{description}
   \item[Bridge]
+  \item[Cargo bay]
   \item[Crew quarters]
   \item[Engine room]
+  \item[Hangar]
   \item[Hydroponics]
   \item[Sick bay]
 \end{description}
@@ -48,8 +58,6 @@ A component and it's purpose are defined by multiple stats. These stats can diff
   \item[Jump drive]
   \item[Lifesupport]
   \item[Scanner]
-  \item[Lifesupport]
-  \item[Lifesupport]
 \end{description}
 
 \subsection{Weapons}
