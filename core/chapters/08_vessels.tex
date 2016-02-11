@@ -27,11 +27,41 @@ A component and it's purpose are defined by multiple stats. These stats can diff
 \subsection{Armour}
 \label{sub:Vessel-Armour}
 
+\subsection{Rooms}
+\label{sub:Vessel-Rooms}
+
+\begin{description}
+  \item[Bridge]
+  \item[Crew quarters]
+  \item[Engine room]
+  \item[Hydroponics]
+  \item[Sick bay]
+\end{description}
+
 \subsection{Subsystems}
 \label{sub:Vessel-Subsystems}
 
+\begin{description}
+  \item[Cargo hatch]
+  \item[Engine]
+  \item[Fuel tank]
+  \item[Jump drive]
+  \item[Lifesupport]
+  \item[Scanner]
+  \item[Lifesupport]
+  \item[Lifesupport]
+\end{description}
+
 \subsection{Weapons}
 \label{sub:Vessel-Weapons}
+
+\begin{description}
+  \item[Ballistic weapons]
+  \item[Missiles]
+  \item[Torpedos]
+  \item[Energy weapons]
+  \item[Ammo dump]
+\end{description}
 
 The most important stats for any weapon are the damage and the damage type. There are two different types of damage, one being the kinetic damage, the other being energy damage. Kinetic weapons are all weapons that use a projectile like rail guns, gatling guns, while energy weapons usually utilize heat or electricity to damage an opponent.
 
@@ -89,13 +119,102 @@ The bearing of a battery defines in which arcs a battery can fire at. Usually, e
 
 Any vessel can be uniquely assembled, although most ships are created in mass production. So if a character knows about a vessel in more detail, he can assume that the vessel in question has exactly those components. Otherwise, scanners, espionage and the like might shed some light on the exact vessel composition. Components, such as \emph{rooms}, can only be identified when boarding or hacking the vessel, although the bridge is almost always visually distinguishable from the outside.
 
-\section{Combat}
-\label{sec:Vessels-Combat}
+\chapter{Vessel Combat}
+\label{chap:Vessel-Combat}
 
-The combat with vessels is very similiar to the rules described in Chapter~\ref{chap:Combat}, unless otherwise noted.
+The combat with vessels is similiar to the rules described in Chapter~\ref{chap:Combat}, unless otherwise noted.
 
-All the weapons from any battery can be fired by an AI or a character. F.e. a spaceship with 3 batteries may have two people operating a battery each, while the third battery is operated by a targetting AI. Roll an attack for every weapon in a battery, then roll the damage for any weapon that hit it's target. Since larger ships have more weapons and multiple batteries, you can use a flat damage instead, so you skip the part of rolling damage and take an average of the damage you would normally do.
+\begin{enumerate}
+  \item Setup
+    \begin{enumerate}
+      \item Determine range between ships and their relative position.
+      \item Determine crew positions.
+      \item Determine initiative.
+    \end{enumerate}
+  \item Combat Phase
+    \begin{enumerate}
+      \item Act
+      \item React
+      \item Resolve
+    \end{enumerate}
+\end{enumerate}
+
+\section{Setup}
+\label{sec:Vessels-Combat-Setup}
+
+\subsection{Range \& Position}
+\label{sub:Vessels-Combat-Setup-Range}
+
+The distances are similiar to those in Chapter~\ref{chap:Combat}
+
+\begin{description}
+  \item[Close:] < 1km
+  \item[Medium:] 1km - 25km
+  \item[Far:] 25km - 500km
+  \item[Distant:] > 500km
+\end{description}
+
+Also, before combat begins be sure to determine the relative positions of each ship, and which side is facing where. Since not all weapon batteries can fire at all arcs, it's imperative to know if a weapon can fire at an enemy or not. More so, when a vessel is hit, internal damage can occur where it's important to know if the vessel f.e. was hit on the starboard or port side.
+
+\subsection{Crew Positions}
+\label{sub:Vessels-Combat-Setup-Crew-Positions}
+
+If the vessel is larger so it requires more people to effectively use it in combat, the following positions come available. Some of them can only be held by one person, while others, such as the gunner or engineer, can be held by multiple people.
+
+\begin{description}
+  \item[Captain] Orders the crew, determines the tactic used, etc.
+  \item[Pilot] The pilot maneuvers the vessel.
+  \item[Engineer] An engineer is responsible for repairs.
+  \item[Gunner] A gunner uses any of the vessels weapon batteries.
+  \item[Marine] The marine is a combat trained unit, trained to board other ships or defend the ship from boarding parties.
+  \item[Passenger] A passenger typically is not involved in the combat in any way.
+\end{description}
+
+\subsection{Artificial Intelligence}
+\label{sub:Vessels-Combat-Setup-Artificial-Intelligence}
+
+Some of the position listed in~\ref{sub:Vessels-Combat-Setup-Crew-Positions} can be assumed by artifial intelligence components. Possible AI modules include:
+
+\begin{description}
+  \item[Piloting and navigation module]
+  \item[Fire-control]
+  \item[Damage mitigation module] This module seals off exposed areas, ventilates air in case of fire, etc.
+\end{description}
+
+\subsection{Initiative}
+\label{sub:Vessels-Combat-Setup-Initiative}
+
+The pilots of all included vessels use the according \emph{Pilot (any)} skill to determine the iniative.
+
+\section{Combat Phase}
+\label{sec:Vessels-Combat-Combat-Phase}
+
+Combat takes place in turns. A player may make two actions per turn. While normal combat is handled each player at a time, the crew of a vessel coordinate their actions and execute them simultaneously. Also, turns last much longer than in normal combat, up to several minutes. Some valid actions are:
+
+\begin{itemize}
+  \item Move up to the vessel's speed.
+  \item Communicate with fellow players.
+  \item Attack an enemy.
+  \item Prepare for an attack by the enemy.
+  \item Perform a skill check.
+\end{itemize}
+
+\subsection{Boarding}
+\label{sub:Vessels-Combat-Combat-Phase-Boarding}
+
+The pilots of two vessels make oppossed check. If the attacker wins, boarding is initiated, if the defender wins, the boarding attempt fails. Pilots of smaller, lighter and thus faster vessels have an advantage over slower ones, which influences the penalties or bonuses respectively.
+
+If the boarding attempt was successful, switch to normal combat rules.
+% TODO Faster boarding result determination
+
+\subsection{Firing}
+\label{sub:Vessels-Combat-Combat-Phase-Firing}
+
+All the weapons from any battery can be fired by an AI or a character. F.e. a spaceship with 3 batteries may have two people operating a battery each, while the third battery is operated by a targetting AI. Roll an attack for every weapon in a battery, then roll the damage for any weapon that hit it's target. Since larger ships have more weapons and multiple batteries, you can use a flat damage for each weapon that hit instead, so you skip the part of rolling damage and take an average of the damage you would normally do.
 
 The attacker can choose to attack the vessel directly or aim at any other component the vessel may have. If the attacker aims at a component the vessel doesn't have, the vessel is attacked directly instead. The vessel itself is usually way more durable than any components, so attacking certain components might prove much more useful.
 
 If the attacked vessel is too large, slow, bulky or simply not maneuverable enough, your attack automatically hits, disregarding the maneuverability of your vessel.
+
+\subsection{Damage}
+\label{sub:Damage}
