@@ -19,6 +19,8 @@ The Hull defines the size of a vessel. The size is measured by displacement tons
 Smaller vessels, namely anything with less than 100 tons, also have additional pool values for personal combat. Every 10 tons add 5 Hull Points and Structure Points, to a maximum of 50 Structure Points and 50 Hull Points at a 100 displacement tons.
 A small vessel gets an additional Hull Point every 50 tons, and an additional Structure Point at 80 tons.
 
+The base price of a vessel is a million Credits. Add a 100 thousand Credits for each additional 10 tons of hull.
+
 \begin{table}[H]
   \centering
   \caption{Small Vessels}
@@ -58,7 +60,7 @@ The components can be categorized into:
 
 \subsection{Power plant}
 
-A vessel can be supplied by power by a fusion reactor or the newer and much more expensive matter/anti-matter (M/AM) reactor.
+A vessel can be supplied by power by a fusion reactor or the newer and much more expensive matter/anti-matter (M/AM) reactor. A vessel only needs enough power for propulsion and optional jump drives. Energy needed for weapons, subsystems etc. can be ignored since they only make for a small fraction of the overall power usage. Or in other words, every power plant is able to operator all kinds of drives and additionally power all systems and weapons on board.
 
 \subsection{Fuel}
 \label{sub:Fuel}
@@ -72,11 +74,11 @@ Fusion reactors are fueled by processed hydron fuel cells, while  a matter/anti-
 
 Jump drives allow interstellar and even intergalactic travel but require a lot of power to be initiated.
 
-\subsubsection{Warp drive}\footnote{Also known as Alcubierre drive.}
+\subsubsection[Warp drive]{Warp drive\footnote{Also known as Alcubierre drive.}}
 
 Requires a the energy output of a fusion reactor.
 
-\subsubsection{Hyperdrive}\footnote{Also known as Einstein-Rosen-Bridge drive.}
+\subsubsection[Hyperdrive]{Hyperdrive\footnote{Also known as Einstein-Rosen-Bridge drive.}}
 
 Requires a the energy output of a matter/anti-matter reactor.
 
@@ -96,6 +98,20 @@ The space around a vessel is divided into 4 90 degree arcs in a two dimensional 
 \label{sec:Hardpoints & Turrets}
 
 Any vessel has hardpoints whereas each serves as a platform for exactly one turret. The turret defines how many weapons can fit onto it. These weapons are always of the same type or else the fire control wouldn't function properly. A hardpoint can be located anywhere on the ship, but usually the chassis dictates where a weapon mount is located.
+
+\begin{table}[H]
+  \centering
+  \caption{Turrets}
+  \begin{tabularx}{\textwidth}{|l|l|l|X|}
+    \hline
+    Turret                  & Weight (in tons) & Cost (in MCr.)         & Notes                                                    \\ \hline
+    Single Weapon Mount     & 1      & 0.2                    & ~                                                        \\ \hline
+    Double Weapon Mount     & 1      & 0.5                    & ~                                                        \\ \hline
+    Triple Weapon Mount     & 1      & 1                      & ~                                                        \\ \hline
+    Retracting Weapon Mount & 2      & +1                     & When retracted scanners can not pick up the hidden arms. \\ \hline
+    Fixed Weapon Mount      & -      & Half the turret price. & Limited to only one fire arc.                            \\ \hline
+  \end{tabularx}
+\end{table}
 
 \subsection{Bearing}
 \label{sub:Bearing}
@@ -122,14 +138,14 @@ A jumpdrive uses energy once to bend the space. The energy used depends on the d
   \centering
   \caption{Armour}
   \label{tab:vessel-armour}
-  \begin{tabular}{|l|l|l|l|}
+  \begin{tabularx}{\textwidth}{|l|l|l|l|}
     \hline
     Armour                    & Protection & Cost         & Weight      \\  \hline
     Concrete                  & 1          & 5\% of hull  & 5\% of hull \\ \hline
     Steel platings            & 2          & 10\% of hull & 5\% of hull \\ \hline
     Tungsten carbide platings & 4          & 30\% of hull & 5\% of hull \\ \hline
     Depleted Uranium platings & 5          & 50\% of hull & 5\% of hull \\ \hline
-  \end{tabular}
+  \end{tabularx}
 \end{table}
 
 \section{Weapons}
@@ -142,25 +158,25 @@ A jumpdrive uses energy once to bend the space. The energy used depends on the d
   \begin{tabularx}{\textwidth}{|l|l|l|l|l|X|}
     \hline
     Weapon       & Damage      & Range       & Cost & Weight  & Notes                            \\ \hline
-    Cannon       & 2d6         & 50 km       & ~    & 5 tons  & ~                                \\ \hline
-    FLAK Cannon  & 1d4         & 5 km        & ~    & 2 ton   & Requires 2 Speed Points to Dodge \\ \hline
-    Gatling Gun  & 1d8         & 20 km       & ~    & 2 ton   & ~      \\ \hline
-    MRL          & See Missile & See Missile & ~    & 20 tons & Can fire up to 12 missiles       \\ \hline
-    Torpedo tube & See Torpedo & See Torpedo & ~    & 50 tons & Can only make 1 attack per turn  \\ \hline
-    Rail Gun     & 2d12     & 500 km      & ~    & 40 tons & Ignores Armour                   \\ \hline
+    Cannon       & 2d6         & 50 km       & 50 kCr.    & 5 tons  & ~                                \\ \hline
+    FLAK Cannon  & 1d4         & 5 km        & 30 kCr.    & 2 tons   & Requires 2 Speed Points to Dodge \\ \hline
+    Gatling Gun  & 1d8         & 20 km       & 10 kCr.    & 2 tons   & ~      \\ \hline
+    MRL          & See Missile & See Missile & 100 kCr.    & 20 tons & Can fire up to 12 missiles       \\ \hline
+    Torpedo tube & See Torpedo & See Torpedo & 200 kCr.    & 50 tons & Can only make 1 attack per turn  \\ \hline
+    Rail Gun     & 2d12     & 500 km      & 500 kCr.    & 40 tons & Ignores Armour                   \\ \hline
   \end{tabularx}
 \end{table}
 
 \begin{table}
   \centering
   \caption{Torpedos}
-  \begin{tabular}{|l|l|l|}
+  \begin{tabularx}{\textwidth}{|l|l|l|X|}
     \hline
-    Torpedo            & Damage & Notes                                               \\ \hline
-    Gravity Torpedo    & 2d6   & Reduces Speed Points by 1.                          \\ \hline
-    Nuclear Torpedo    & 2d8   & Applies lethal radiation to location.               \\ \hline
-    Antimatter Torpedo & 2d12   & On hit also effects directly surrounding locations. \\ \hline
-  \end{tabular}
+    Torpedo            & Damage & Cost & Notes                                               \\ \hline
+    Gravity Torpedo    & 2d6   & 250 kCr. & Reduces Speed Points by 1.                          \\ \hline
+    Nuclear Torpedo    & 2d8   & 500 kCr. & Applies lethal radiation to location.               \\ \hline
+    Antimatter Torpedo & 2d12   & 1 MCr. & On hit also effects directly surrounding locations. \\ \hline
+  \end{tabularx}
 \end{table}
 
 \begin{table}
@@ -279,21 +295,21 @@ Some valid actions are:
   \label{tab:vessel-damage}
   \begin{tabular}{|l|l|}
     \hline
-    \textbf{Damage}              & \textbf{Effect}                    \\ \hline
-    0 or less                    & No damage                          \\ \hline
-    1-4                          & Single Hit                         \\ \hline
-    5-8                          & Two Single Hits                    \\ \hline
-    9-12                         & Double Hit                         \\ \hline
-    13-16                        & Three Single Hits                  \\ \hline
-    17-20                        & Two Single Hits, Double Hit        \\ \hline
-    21-24                        & Two Double Hits                    \\ \hline
-    25-28                        & Triple Hit                         \\ \hline
-    29-32                        & Triple Hit, Single Hit             \\ \hline
-    33-36                        & Triple Hit, Double Hit             \\ \hline
-    37-40                        & Triple Hit, Double Hit, Single Hit \\ \hline
-    41-44                        & Two Triple Hits                    \\ \hline
-    For every extra three points & +1 Single Hit                      \\ \hline
-    For every extra six points   & +1 Double Hit                      \\ \hline
+    \textbf{Damage}              & \textbf{Effect}                 \\ \hline
+    0 or less                    & No damage                       \\ \hline
+    1-3                          & One Hit                         \\ \hline
+    4-7                          & Two Hits                        \\ \hline
+    8-11                         & Double Hit                      \\ \hline
+    12-15                        & Three Hits                      \\ \hline
+    16-19                        & Two Hits, Double Hit            \\ \hline
+    20-23                        & Two Double Hits                 \\ \hline
+    24-27                        & Triple Hit                      \\ \hline
+    28-31                        & Triple Hit, One Hit             \\ \hline
+    32-35                        & Triple Hit, Double Hit          \\ \hline
+    36-39                        & Triple Hit, Double Hit, One Hit \\ \hline
+    40-43                        & Two Triple Hits                 \\ \hline
+    For every extra three points & +1 One Hit                      \\ \hline
+    For every extra six points   & +1 Double Hit                   \\ \hline
   \end{tabular}
 \end{table}
 
