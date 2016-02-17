@@ -1,108 +1,87 @@
 \chapter{Vessels}
 \label{chap:Vessels}
 
-\section{Definition}
-\label{sec:Vessels-Definition}
+\section{Hitpoints}
+\label{sec:Hitpoints}
 
-A vessel is a highly customizable craft that fulfills one or more purposes, usually things like transport, expedition, scouting, security or war. The chassis is the foundation for any vessel and esentially defines how strong, fast and big a vessel can get. The chassis itself does not have any functions - it just tells the user or creator of a vessel, what amount of different components can fit onto the vessel.
+The hitpoints of anyvessel are composed by its three pools:
+\begin{description}
+  \item[Armour] Additional Armour protect the vessel from extensive damage.
+  \item[Hull] Any damage is applied to the Hull. If the Hull is destroyed, further damage applies to the Structure.
+  \item[Structure] The integrity of a vessel is abstracted by Structure Points. If they reach 0, the vessel is completely destroyed.
+\end{description}
+
+\section{Hull}
+\label{sec:Hull}
+
+The Hull defines the size of a vessel. The size is measured by displacement tons. The size defines how durable a vessel is, but also the the maximum load. Every 50 tons rounded down adds 1 Hull Point and 1 Structure Point, but every vessel has a minimum of 1 Structure Point. Normal vessels start at a size of 100 tons.
+
+Smaller vessels, namely anything with less than 100 tons, also have additional pool values for personal combat. Every 10 tons add 5 Hull Points and Structure Points, to a maximum of 50 Structure Points and 50 Hull Points at a 100 displacement tons.
+A small vessel gets an additional Hull Point every 50 tons, and an additional Structure Point at 80 tons.
+
+\begin{table}[H]
+  \centering
+  \caption{Small Vessels}
+  \begin{tabular}{|l|l|l|l|l|}
+    \hline
+    Tons & \multicolumn{2}{l|}{Personal Scale} & \multicolumn{2}{l|}{Vessel Scale} \\ \hline
+    ~    & Hull           & Structure & Hull         & Structure \\ \hline
+    10   & 5              & 5         & 0            & 1         \\ \hline
+    20   & 10             & 10        & 0            & 1         \\ \hline
+    30   & 15             & 15        & 0            & 1         \\ \hline
+    40   & 20             & 20        & 0            & 1         \\ \hline
+    50   & 25             & 25        & 1            & 1         \\ \hline
+    60   & 30             & 30        & 1            & 1         \\ \hline
+    70   & 35             & 35        & 1            & 1         \\ \hline
+    80   & 40             & 40        & 1            & 2         \\ \hline
+    90   & 45             & 45        & 1            & 2         \\ \hline
+    100  & 50             & 50        & 2            & 2         \\ \hline
+  \end{tabular}
+\end{table}
 
 \section{Components}
-\label{sec:Vessels-Components}
+\label{sec:Components}
 
+A vessel is composed by multiple components. These are interchangeable, as long as there is enough space in the vessel. While some components are required for a vessel to function properly, others are optional.
+
+The components can be categorized into:
 \begin{description}
-  \item[Armour] Armour platings can be used to further enhance a ships durability in battle or hazardous environment.
-  \item[Rooms] Rooms are only found on larger vessels. This category includes rooms like the crew quarter, medic bay, cargo bay, engine room, bridge, etc.
-  \item[Subsystems] This category is used for everything, that doesn't fit in any of the other categories. They include shield generators, warp drives, engines, fuel tanks, but also components like the cargo hatch can be found in this category.
-  \item[Weapons] Weapons can range from simple cannons to complex missile launchers, railguns, etc. Also, ammo is included in this category.
+  \item[Armour]
+  They protect the ship against enemy weapon fire or hazardous environments.
+  \item[Rooms]
+  Define the layout and functionality of the interior of a (larger) vessel.
+  \item[Subsystems]
+  Contains various technologies that are used on a vessel. This includes jump drives, reactors, scanners, etc.
+  \item[Weapons]
+  Anything from simple cannons to complex missile launchers or railguns are found in this category.
 \end{description}
 
-A component and it's purpose are defined by multiple stats. These stats can differ from component to component, based on it's use, but every component includes the following stats:
+\subsection{Power plant}
 
-\begin{description}
-  \item[Size] The size tells you the minimum size of the slot the vessel requires. You cannot, f.e., add a medium component to a small ship.
-  \item[Slots] The amount of slots that are needed to install the component needs.
-  \item[Hitpoints] Every component's condition is descriped by it's hitpoints. If a component is damaged, so that it doesn't have it maximum hitpoints anymore, it becomes instable. Using an instable component bears the following results:
-  \begin{itemize}
-    \item The component functions normally.
-    \item The component does not work as intended.
-    \item The component does not work at all.
-    \item The component is destroyed.
-    \item The component is destroyed by its secondary effect.
-  \end{itemize}
-  If its hitpoints are brought to 0, the component counts as destroyed and cannot be made operational again. Some components may have secondary effects when destroyed. F.e. if the ammo dump of a vessel is destroyed, as in brought to 0 hitpoints, there is a chance that the remaining ammo will explode which would not only deplet the enemies ammo, but also cause additional damage to the vessel.
-\end{description}
+A vessel can be supplied by power by a fusion reactor or the newer and much more expensive matter/anti-matter (M/AM) reactor.
 
-\subsection{Armour}
-\label{sub:Vessel-Armour}
+\subsection{Fuel}
+\label{sub:Fuel}
 
-\subsection{Rooms}
-\label{sub:Vessel-Rooms}
+Fusion reactors are fueled by processed hydron fuel cells, while  a matter/anti-matter (M/AM) reactor uses matter/anti-matter cells as fuel.
 
-\begin{description}
-  \item[Bridge]
-  \item[Cargo bay]
-  \item[Crew quarters]
-  \item[Engine room]
-  \item[Hangar]
-  \item[Hydroponics]
-  \item[Observation]
-  \item[Sick bay]
-\end{description}
+\subsection{Propulsion}
 
-\subsection{Subsystems}
-\label{sub:Vessel-Subsystems}
 
-\begin{description}
-  \item[Cargo hatch]
-  \item[Engine]
-  \item[Fuel tank]
-  \item[Jump drive]
-  \item[Lifesupport]
-  \item[Scanner]
-\end{description}
+\subsection{Jump drives}
 
-\subsection{Weapons}
-\label{sub:Vessel-Weapons}
+Jump drives allow interstellar and even intergalactic travel but require a lot of power to be initiated.
 
-\begin{description}
-  \item[Ballistic weapons]
-  \item[Missiles]
-  \item[Torpedos]
-  \item[Energy weapons]
-  \item[Ammo dump]
-\end{description}
+\subsubsection{Warp drive}\footnote{Also known as Alcubierre drive.}
 
-The most important stats for any weapon are the damage and the damage type. There are two different types of damage, one being the kinetic damage, the other being energy damage. Kinetic weapons are all weapons that use a projectile like rail guns, gatling guns, while energy weapons usually utilize heat or electricity to damage an opponent.
+Requires a the energy output of a fusion reactor.
 
-Weapons on vessel usually bear such devestating force, that any living creature under direct fire, no matter if it's armored or not, has no chance of survival when hit. The damage of these weapons is much lower compared to f.e. small arms, so the DM and the players dont have to roll tens of dice for simple weapons just to determine the damage dealt.
+\subsubsection{Hyperdrive}\footnote{Also known as Einstein-Rosen-Bridge drive.}
 
-On the otherhand, normal weapons do not deal any damage to vessels. It doesn't even matter if it's AP, HEI/AP ammunition. Only light and heavy weapons are able to deal damage to vessels, but not in general. A rule of thumb is though, that weapons that use the same cartridges as vessel weapons are able to deal damage to vessels as long as they fire AP or HEI/AP ammunition.
-
-% \begin{table}
-%   \caption{Kinetic vessel weapons}
-%   \label{fig:Vessels-kinetic-weapons}
-%     \begin{tabular}{|l|l|l|l|l|l|}
-%     \hline
-%     Name                        & Cartridge & Range  & Ammo used per action & Cost & Weight \\ \hline
-%     \multicolumn{6}{|l|}{Gatling guns} \\ \hline
-%     GAU-19                      & .50 BMG   & 1800 m & 25                   & ~    & ~      \\ \hline
-%     M61 Vulcan                  & 20mm      & 7000 m & 100                  & ~    & ~      \\ \hline
-%     Grjasew-Schipunow GSch-6-23 & 23mm      & 5000 m & 150                  & ~    & ~      \\ \hline
-%     GAU-12 Equalizer            & 25mm      & 4500 m & 70                   & ~    & ~      \\ \hline
-%     GAU-8 Avenger               & 30mm      & 1220 m & 60                   & ~    & ~      \\ \hline
-%     \multicolumn{6}{|l|}{Railgun} \\ \hline
-%     Railgun MK I                & 12,7cm    & 177 km & 1                    & ~    & ~      \\ \hline
-%     Railgun MK II               & 45,72cm   & 200 km & 1                    & ~    & ~      \\ \hline
-%     \multicolumn{6}{|l|}{Missile Launcher} \\ \hline
-%     ~                           & ~         & ~      & ~                    & ~    & ~      \\ \hline
-%     ~                           & ~         & ~      & ~                    & ~    & ~      \\ \hline
-%     ~                           & ~         & ~      & ~                    & ~    & ~      \\ \hline
-%     ~                           & ~         & ~      & ~                    & ~    & ~      \\ \hline
-%     \end{tabular}
-% \end{table}
+Requires a the energy output of a matter/anti-matter reactor.
 
 \section{Fire Arcs}
-\label{sec:Vessels-Fire-Arcs}
+\label{sec:Fire Arcs}
 
 The space around a vessel is divided into 4 90 degree arcs in a two dimensional space. In three dimensions the arcs have an additional 90 degree span up and down respectively. The arcs are labelled clockwise, starting in the front:
 
@@ -113,68 +92,142 @@ The space around a vessel is divided into 4 90 degree arcs in a two dimensional 
   \item Port Arc
 \end{itemize}
 
-\section{Weapon Batteries}
-\label{sec:Vessels-Weapon-Batteries}
+\section{Hardpoints \& Turrets}
+\label{sec:Hardpoints & Turrets}
 
-Any vessel can have mounts for one or multiple weapons, commonly referred to as battery or weapon battery. These mounts serve as platform for multiple weapons - they don't necessarily need to be of the same type, although this is very often the case. A weapon battery can be located anywhere on the ship, but usually the chassis dictates where a weapon mount is located.
+Any vessel has hardpoints whereas each serves as a platform for exactly one turret. The turret defines how many weapons can fit onto it. These weapons are always of the same type or else the fire control wouldn't function properly. A hardpoint can be located anywhere on the ship, but usually the chassis dictates where a weapon mount is located.
 
-\subsection{Battery Bearing}
-\label{sub:Vessels-Battery-Bearing}
+\subsection{Bearing}
+\label{sub:Bearing}
 
-The bearing of a battery defines in which arcs a battery can fire at. Usually, either the front or the side arcs have the main weaponry, while the back is only sparsely outfitted. A spaceship f.e. may have fighter or bomber defense in the rear, but no larger weaponry.
+The bearing of a turret defines in which arcs a battery can fire at. Usually, either the front or the side arcs have the main weaponry, while the back is only sparsely outfitted. A spaceship f.e. may have fighter or bomber defense in the rear, but no larger weaponry.
 
-\section{Identifying Vessels}
-\label{sec:Vessels-Identifying Vessels}
+\section{Travel}
+\label{sec:Travel}
 
-Any vessel can be uniquely assembled, although most vessels are created in mass production. So if a character knows about a vessel in more detail, he can assume that the vessel in question has exactly those components. Otherwise, scanners, espionage and the like might shed some light on the exact vessel composition. Components, such as \emph{rooms}, can only be identified when boarding or hacking the vessel, although the bridge or cockpit is almost always visually distinguishable from the outside.
+\subsection{Sublight Travel}
+\label{sub:Sublight Travel}
+
+Sublight propulsion is cheaper and more cost efficient than other drives. This component defines how long it takes to fly from origin to destination without hyperspace, but also how much Speed Points a vessel has in combat.
+
+\subsection{Hyperspace}
+\label{sub:Hyperspace}
+
+A jumpdrive uses energy once to bend the space. The energy used depends on the distance from origin to destination and the mass of the vessel. Using a jump drive creates a radioactive isotope. The radioactivity is not harmful to humans, but it can be very easily picked up by modern radars. Analysis of the radioactive residue allows an approximation about when a vessel activated its jump drive and how big the vessel was.
+
+\section{Armour}
+\label{sec:Armour}
+
+\begin{table}[H]
+  \centering
+  \caption{Armour}
+  \label{tab:vessel-armour}
+  \begin{tabular}{|l|l|l|l|}
+    \hline
+    Armour                    & Protection & Cost         & Weight      \\  \hline
+    Concrete                  & 1          & 5\% of hull  & 5\% of hull \\ \hline
+    Steel platings            & 2          & 10\% of hull & 5\% of hull \\ \hline
+    Tungsten carbide platings & 4          & 30\% of hull & 5\% of hull \\ \hline
+    Depleted Uranium platings & 5          & 50\% of hull & 5\% of hull \\ \hline
+  \end{tabular}
+\end{table}
+
+\section{Weapons}
+\label{sec:Weapons}
+
+\begin{table}[H]
+  \centering
+  \caption{Weapons}
+  \label{tab:vessel-weapons}
+  \begin{tabular}{|l|l|l|l|l|l|}
+    \hline
+    Weapon       & Damage      & Range       & Cost & Weight  & Notes                            \\ \hline
+    Cannon       & 2d6         & 50 km       & ~    & 5 tons  & ~                                \\ \hline
+    FLAK Cannon  & 1d4         & 5 km        & ~    & 2 ton   & Requires 2 Speed Points to Dodge \\ \hline
+    Gatling Gun  & 1d8         & 20 km       & ~    & 2 ton   & ~      \\ \hline
+    MRL          & See Missile & See Missile & ~    & 20 tons & Can fire up to 12 missiles       \\ \hline
+    Torpedo tube & See Torpedo & See Torpedo & ~    & 50 tons & Can only make 1 attack per turn  \\ \hline
+    Rail Gun     & 2d12     & 500 km      & ~    & 40 tons & Ignores Armour                   \\ \hline
+  \end{tabular}
+\end{table}
+
+\begin{table}
+  \centering
+  \caption{Torpedos}
+  \begin{tabular}{|l|l|l|}
+    \hline
+    Torpedo            & Damage & Notes                                               \\ \hline
+    Gravity Torpedo    & 2d6   & Reduces Speed Points by 1.                          \\ \hline
+    Nuclear Torpedo    & 2d8   & Applies lethal radiation to location.               \\ \hline
+    Antimatter Torpedo & 2d12   & On hit also effects directly surrounding locations. \\ \hline
+  \end{tabular}
+\end{table}
+
+\begin{table}
+  \centering
+  \caption{Missiles}
+  \begin{tabular}{|l|l|l|l|l|}
+    \hline
+    Missile         & Damage & Cost & Weight   & Notes                                                      \\ \hline
+    Basic Missile   & 1d6    & 1000 & 0.1 tons & ~                                                          \\ \hline
+    Guided Missile  & 1d6    & 2500 & 0.1 tons & Rolls an attack every turn until it hits or it's destroyed \\ \hline
+    Nuclear Warhead & 2d6    & 5000 & 0.5 tons & Applies lethal radiation to location                       \\ \hline
+  \end{tabular}
+\end{table}
 
 \chapter{Vessel Combat}
-\label{chap:Vessel-Combat}
+\label{chap:Vessel Combat}
 
 The combat with vessels is similiar to the rules described in Chapter~\ref{chap:Combat}, unless otherwise noted.
 
 \begin{enumerate}
   \item Setup
-    \begin{enumerate}
-      \item Determine range between ships and their relative position.
-      \item Determine crew positions.
-      \item Determine initiative.
-    \end{enumerate}
+  \begin{enumerate}
+    \item Determine range between ships and their relative position.
+    \item Determine crew positions.
+    \item Determine initiative.
+  \end{enumerate}
   \item Combat Phase
-    \begin{enumerate}
-      \item Act
-      \item React
-      \item Resolve
-    \end{enumerate}
+  \begin{enumerate}
+    \item Act
+    \item React
+    \item Resolve
+  \end{enumerate}
 \end{enumerate}
-
-\section{Setup}
-\label{sec:Vessels-Combat-Setup}
 
 \subsection{Range \& Position}
 \label{sub:Vessels-Combat-Setup-Range}
 
-The distances are similiar to those in Chapter~\ref{chap:Combat}
+The distances are similiar to those in Chapter~\ref{chap:Combat}:
 
-\begin{description}
-  \item[Close:] < 1km
-  \item[Medium:] 1km - 25km
-  \item[Far:] 25km - 500km
-  \item[Distant:] > 500km
-\end{description}
+\begin{table}[H]
+  \centering
+  \caption{Range}
+  \label{tab:vessel-range}
+  \begin{tabular}{|l|l|}
+    \hline
+    Range    & Distance       \\ \hline
+    Adjacent & < 1km          \\ \hline
+    Close    & 1km - 10km     \\ \hline
+    Medium   & 10km - 100km   \\ \hline
+    Far      & 100km - 1000km \\ \hline
+    Distant  & > 1000km       \\ \hline
+  \end{tabular}
+\end{table}
 
-Also, before combat begins be sure to determine the relative positions of each ship, and which side is facing where. Since not all weapon batteries can fire at all arcs, it's imperative to know if a weapon can fire at an enemy or not. More so, when a vessel is hit, internal damage can occur where it's important to know if the vessel f.e. was hit on the starboard or port side.
+
+Also, before combat begins be sure to determine the relative positions of each ship, and which side is facing where. Since it takes Speed Points to turn in combat and turrets can not fire into all arcs, the orientation is important too.
 
 \subsection{Crew Positions}
 \label{sub:Vessels-Combat-Setup-Crew-Positions}
 
-If the vessel is larger so it requires more people to effectively use it in combat, the following positions come available. Some of them can only be held by one person, while others, such as the gunner or engineer, can be held by multiple people.
+If the vessel is larger so it requires more people to effectively use it in combat, the following positions become available. Some of them can only be held by one person, while others, such as the gunner or engineer, can be held by multiple people.
 
 \begin{description}
   \item[Captain] Orders the crew, determines the tactic used, etc.
   \item[Pilot] The pilot maneuvers the vessel.
   \item[Engineer] An engineer is responsible for repairs.
-  \item[Gunner] A gunner uses any of the vessels weapon batteries.
+  \item[Gunner] A gunner uses any of the vessels turret.
   \item[Marine] The marine is a combat trained unit, trained to board other ships or defend the ship from boarding parties.
   \item[Passenger] A passenger typically is not involved in the combat in any way.
 \end{description}
@@ -182,48 +235,95 @@ If the vessel is larger so it requires more people to effectively use it in comb
 \subsection{Artificial Intelligence}
 \label{sub:Vessels-Combat-Setup-Artificial-Intelligence}
 
-Some of the position listed in~\ref{sub:Vessels-Combat-Setup-Crew-Positions} can be assumed by artifial intelligence components. Possible AI modules include:
+Some of the position listed in~\ref{sub:Vessels-Combat-Setup-Crew-Positions} can be assumed by artifial intelligence components. These components are used for combat. Possible AI combat modules include:
 
 \begin{description}
   \item[Piloting and navigation module]
+  Automatically dodges oncoming fire instead of the pilot.
   \item[Fire-control]
-  \item[Damage mitigation module] This module seals off exposed areas, ventilates air in case of fire, etc.
+  Any fire-control AI can assume control of all turrets on a vessel.
+  \item[Damage mitigation module] This module seals off exposed areas, ventilates air in case of fire, etc. to prevent crew damage.
 \end{description}
 
 \subsection{Initiative}
 \label{sub:Vessels-Combat-Setup-Initiative}
 
-The pilots of all included vessels use the according \emph{Pilot (any)} skill to determine the iniative.
+The captain of a vessel uses his \emph{Tactics} skill to determine the initiative. If a vessel has no captain, use the pilots \emph{Pilot (any)} skill instead.
 
 \section{Combat Phase}
 \label{sec:Vessels-Combat-Combat-Phase}
 
-Combat takes place in turns. A player may make two actions per turn. While normal combat is handled each player at a time, the crew of a vessel coordinate their actions and execute them simultaneously. Also, turns last much longer than in normal combat, up to several minutes. Some valid actions are:
+Combat takes place in turns. A player may make two actions per turn and use an indefinite amount of reactions on the enemies turn. While normal combat is handled each player at a time, the crew of a vessel coordinate their actions and execute them simultaneously. Also, turns last much longer than in normal combat, up to several minutes.
 
-\begin{itemize}
-  \item Move up to the vessel's speed.
-  \item Communicate with fellow players.
-  \item Attack an enemy.
-  \item Prepare for an attack by the enemy.
-  \item Perform a skill check.
-\end{itemize}
+\subsection{Actions}
+\label{sub:Actions}
 
-\subsection{Boarding}
-\label{sub:Vessels-Combat-Combat-Phase-Boarding}
+Some valid actions are:
 
-The pilots of two vessels make oppossed piloting checks. If the attacker wins, boarding is initiated, if the defender wins, the boarding attempt fails. Pilots of smaller, lighter and thus faster vessels have an advantage over slower ones, which influences the penalties or bonuses respectively.
+\begin{description}
+  \item[Attack]
+  Each gunner and AI may fire all weapons at one ore more enemies. If the enemy has no point defense and does not dodge, the vessel is hit. To deliberately attack a certain subsystem of the enemy vessel, the attacker incurs a -5 penalty.
+  \item[Damage]
+  If a vessel is hit, roll damage for the weapon. Substract the vessels armour from the roll. The result determines how often you hit the enemy with an attack, see Table~\ref{tab:vessel-damage}. For each hit roll for the location hit, see Table~\ref{tab:vessel-location}.
+  \item[Move]
+  A vessel can either move by 1 square its facing or turn 90 degrees in any direction per Speed Point. If no more Speed Points are available the vessel cannot be moved anymore until the next turn.
+  \item[Repair]
+  In combat subsystems can be repaired by making a successful \emph{Engineering} skill check. The difficulty to repair a component is defined by component itself. If you succeed, one hit is repaired. For each 3 points you exceed the DC you can repair an additional hit, up to 3 hits per skill check.
+  \item[Boarding]
+  If your vessel has a boarding crew and the vessels in question are adjacent, the pilot may make a \emph{Pilot (any)} skill checked opposed by the enemies pilot's piloting skill check. If you succeed the enemy vessel is boarded, then switch to normal combat rules. If you fail, the boarding attempt fails.
+\end{description}
 
-If the boarding attempt was successful, switch to normal combat rules.
-% TODO Faster boarding result determination
+\begin{table}[H]
+  \centering
+  \caption{Damage}
+  \label{tab:vessel-damage}
+  \begin{tabular}{|l|l|}
+    \hline
+    \textbf{Damage}              & \textbf{Effect}                    \\ \hline
+    0 or less                    & No damage                          \\ \hline
+    1-4                          & Single Hit                         \\ \hline
+    5-8                          & Two Single Hits                    \\ \hline
+    9-12                         & Double Hit                         \\ \hline
+    13-16                        & Three Single Hits                  \\ \hline
+    17-20                        & Two Single Hits, Double Hit        \\ \hline
+    21-24                        & Two Double Hits                    \\ \hline
+    25-28                        & Triple Hit                         \\ \hline
+    29-32                        & Triple Hit, Single Hit             \\ \hline
+    33-36                        & Triple Hit, Double Hit             \\ \hline
+    37-40                        & Triple Hit, Double Hit, Single Hit \\ \hline
+    41-44                        & Two Triple Hits                    \\ \hline
+    For every extra three points & +1 Single Hit                      \\ \hline
+    For every extra six points   & +1 Double Hit                      \\ \hline
+  \end{tabular}
+\end{table}
 
-\subsection{Firing}
-\label{sub:Vessels-Combat-Combat-Phase-Firing}
+\begin{table}[H]
+  \centering
+  \caption{Location}
+  \label{tab:vessel-location}
+  \begin{tabular}{|l|l|l|l|}
+    \hline
+    \textbf{2d6} & \textbf{Small Craft} & \textbf{External Damage} & \textbf{Internal Damage} \\ \hline
+    2   & Hull                & Hull                & Crew            \\ \hline
+    3   & Fusion reactor      & Sensors             & Jump Drive      \\ \hline
+    4   & Sublight Propulsion & Sublight Propulsion & Fusion reactor  \\ \hline
+    5   & Fuel                & Fuel                & Bay             \\ \hline
+    6   & Hull                & Hull                & Structure       \\ \hline
+    7   & Armour              & Armour              & Cargo           \\ \hline
+    8   & Hull                & Hull                & Structure       \\ \hline
+    9   & Turret              & Turret              & Bay             \\ \hline
+    10  & Hold                & Sublight Propulsion & Jump Drive      \\ \hline
+    11  & Fusion reactor      & Sensors             & Fusion reactor  \\ \hline
+    12  & Bridge              & Hull                & Bridge          \\ \hline
+  \end{tabular}
+\end{table}
 
-All the weapons from any battery can be fired by an AI or a character. F.e. a spaceship with 3 batteries may have two people operating a battery each, while the third battery is operated by a targetting AI. Roll an attack for every weapon in a battery, then roll the damage for any weapon that hit it's target. Since larger ships have more weapons and multiple batteries, you can use a flat damage for each weapon that hit instead, so you skip the part of rolling damage and take an average of the damage you would normally do.
+\subsection{Reactions}
+\label{sub:Reactions}
 
-The attacker can choose to attack the vessel directly or aim at any other component the vessel may have. If the attacker aims at a component the vessel doesn't have, the vessel is attacked directly instead. The vessel itself is usually way more durable than any components, so attacking certain components might prove much more useful.
-
-If the attacked vessel is too large, slow, bulky or simply not maneuverable enough, your attack automatically hits, disregarding the maneuverability of your vessel.
-
-\subsection{Damage}
-\label{sub:Damage}
+\begin{description}
+  \item[Dodging]
+  Reactions are mainly used for dodging oncoming fire. This is only possible if there are Speed Points available to do so. Each dodging maneuver generally costs 1 Speed Point, but to dodge some weapons more Speed Points are required. The pilot then makes a \emph{Pilot (any)} check against the attackers roll. If he beats the attack, he dodges the oncoming fire, otherwise the vessel is hit normally.
+  \item[Point Defense]
+  The gunner or the AI may attack oncoming missiles and torpedos rolling against the attack. Each subsequent point defense roll applies a cumulative penalty of 1. If the roll beats the attack, the missile or torpedo is destroyed, otherwise vessel is hit normally.
+\end{description}
