@@ -16,8 +16,8 @@ The hitpoints of anyvessel are composed by its three pools:
 
 The Hull defines the size of a vessel. The size is measured by displacement tons. The size defines how durable a vessel is, but also the the maximum load. Every 50 tons rounded down adds 1 Hull Point and 1 Structure Point, but every vessel has a minimum of 1 Structure Point. Normal vessels start at a size of 100 tons.
 
-Smaller vessels, namely anything with less than 100 tons, also have additional pool values for personal combat. Every 10 tons add 5 Hull Points and Structure Points, to a maximum of 50 Structure Points and 50 Hull Points at a 100 displacement tons.
-A small vessel gets an additional Hull Point every 50 tons, and an additional Structure Point at 80 tons.
+Smaller vessels, namely anything with less than 100 tons, also have additional pool values for personal combat. Every 10 tons add 5 Hull Points and Structure Points for the personal scale, to a maximum of 50 Structure Points and 50 Hull Points at a 100 displacement tons.
+A small vessel gets an additional Hull Point every 50 tons and an additional Structure Point at 80 tons.
 
 The base price of a vessel is a million Credits. Add a 100 thousand Credits for each additional 10 tons of hull.
 
@@ -60,7 +60,7 @@ The components can be categorized into:
 
 \subsection{Power plant}
 
-A vessel can be supplied by power by a fusion reactor or the newer and much more expensive matter/anti-matter (M/AM) reactor. A vessel only needs enough power for propulsion and optional jump drives. Energy needed for weapons, subsystems etc. can be ignored since they only make for a small fraction of the overall power usage. Or in other words, every power plant is able to operator all kinds of drives and additionally power all systems and weapons on board.
+A vessel can be supplied by power by a fusion reactor or the newer and much more expensive matter/anti-matter (M/AM) reactor. A vessel only needs enough power for propulsion and optional jump drives. Energy needed for weapons, subsystems etc. can be ignored since they only make up for a small fraction of the overall power usage. Or in other words, a power plant is able to operate the any drive with the same or lower class and additionally power all systems and weapons on board.
 
 \subsection{Fuel}
 \label{sub:Fuel}
@@ -82,52 +82,14 @@ Requires a the energy output of a fusion reactor.
 
 Requires a the energy output of a matter/anti-matter reactor.
 
-\section{Fire Arcs}
-\label{sec:Fire Arcs}
-
-The space around a vessel is divided into 4 90 degree arcs in a two dimensional space. In three dimensions the arcs have an additional 90 degree span up and down respectively. The arcs are labelled clockwise, starting in the front:
-
-\begin{itemize}
-  \item Fore Arc
-  \item Starboard Arc
-  \item Aft Arc
-  \item Port Arc
-\end{itemize}
-
-\section{Hardpoints \& Turrets}
-\label{sec:Hardpoints & Turrets}
-
-Any vessel has hardpoints whereas each serves as a platform for exactly one turret. The turret defines how many weapons can fit onto it. These weapons are always of the same type or else the fire control wouldn't function properly. A hardpoint can be located anywhere on the ship, but usually the chassis dictates where a weapon mount is located.
-
-\begin{table}[H]
-  \centering
-  \caption{Turrets}
-  \begin{tabularx}{\textwidth}{|l|l|l|X|}
-    \hline
-    Turret                  & Weight (in tons) & Cost (in MCr.)         & Notes                                                    \\ \hline
-    Single Weapon Mount     & 1      & 0.2                    & ~                                                        \\ \hline
-    Double Weapon Mount     & 1      & 0.5                    & ~                                                        \\ \hline
-    Triple Weapon Mount     & 1      & 1                      & ~                                                        \\ \hline
-    Retracting Weapon Mount & 2      & +1                     & When retracted scanners can not pick up the hidden arms. \\ \hline
-    Fixed Weapon Mount      & -      & Half the turret price. & Limited to only one fire arc.                            \\ \hline
-  \end{tabularx}
-\end{table}
-
-\subsection{Bearing}
-\label{sub:Bearing}
-
-The bearing of a turret defines in which arcs a battery can fire at. Usually, either the front or the side arcs have the main weaponry, while the back is only sparsely outfitted. A spaceship f.e. may have fighter or bomber defense in the rear, but no larger weaponry.
-
 \section{Travel}
 \label{sec:Travel}
 
 \subsection{Sublight Travel}
-\label{sub:Sublight Travel}
 
-Sublight propulsion is cheaper and more cost efficient than other drives. This component defines how long it takes to fly from origin to destination without hyperspace, but also how much Speed Points a vessel has in combat.
+Sublight propulsion is a cheap but slow mean of travel.
 
-\subsection{Hyperspace}
-\label{sub:Hyperspace}
+\subsection{Jump drives}
 
 A jumpdrive uses energy once to bend the space. The energy used depends on the distance from origin to destination and the mass of the vessel. Using a jump drive creates a radioactive isotope. The radioactivity is not harmful to humans, but it can be very easily picked up by modern radars. Analysis of the radioactive residue allows an approximation about when a vessel activated its jump drive and how big the vessel was.
 
@@ -138,15 +100,56 @@ A jumpdrive uses energy once to bend the space. The energy used depends on the d
   \centering
   \caption{Armour}
   \label{tab:vessel-armour}
-  \begin{tabularx}{\textwidth}{|l|l|l|l|}
+  \begin{tabular}{|l|l|l|l|}
     \hline
     Armour                    & Protection & Cost         & Weight      \\  \hline
     Concrete                  & 1          & 5\% of hull  & 5\% of hull \\ \hline
     Steel platings            & 2          & 10\% of hull & 5\% of hull \\ \hline
     Tungsten carbide platings & 4          & 30\% of hull & 5\% of hull \\ \hline
     Depleted Uranium platings & 5          & 50\% of hull & 5\% of hull \\ \hline
+  \end{tabular}
+\end{table}
+
+
+\section{Hardpoints \& Turrets}
+\label{sec:Hardpoints & Turrets}
+
+Any vessel has hardpoints whereas each serves as a platform for exactly one turret. The turret defines how many weapons can fit onto it. It does not matter which weapons are used for multiple turret mounts. F.e. a triple turret mount might have a Gatling Gun, a AAA Cannon and a normal Cannon. Big weapons take up one hardpoint, so no extra turrets are needed for Big Weaponry. Also, those weapons are fixed to the direction they are facing.
+
+A hardpoint can be located anywhere on the ship, but usually the chassis dictates where a weapon mount is located. Every 50 tons of hull rounded down adds a hardpoint.
+
+Small vessels gain an anti personal weapon every 10 tons of hull and a ship weapon every 30 tons starting with 1 each at 10 tons.
+
+\begin{table}[H]
+  \centering
+  \caption{Turrets}
+  \begin{tabularx}{\textwidth}{|l|X|p{1.2cm}|X|}
+    \hline
+    Turret                  & Cost [MCr]             & Weight [ton] & Notes                                                     \\ \hline
+    Single Weapon Mount     & 0.2                    & 1             & ~                                                         \\ \hline
+    Double Weapon Mount     & 0.5                    & 1             & ~                                                         \\ \hline
+    Triple Weapon Mount     & 1                      & 1             & ~                                                         \\ \hline
+    Retracting Weapon Mount & +1                     & +2            & When retracted, scanners can not pick up the hidden arms. \\ \hline
+    Fixed Weapon Mount      & Half the turret price. & -             & Limited to only one fire arc.                             \\ \hline
   \end{tabularx}
 \end{table}
+
+\subsection{Fire Arcs}
+\label{sub:Fire Arcs}
+
+The space around a vessel is divided into 4 90 degree arcs in a two dimensional space. In three dimensions the arcs have an additional 90 degree span up and down respectively. The arcs are labelled clockwise, starting in the front:
+
+\begin{itemize}
+  \item Fore Arc
+  \item Starboard Arc
+  \item Aft Arc
+  \item Port Arc
+\end{itemize}
+
+\subsection{Bearing}
+\label{sub:Bearing}
+
+The bearing of a turret defines in which arcs a battery can fire at. Usually, either the front or the side arcs have the main weaponry, while the back is only sparsely outfitted. A spaceship f.e. may have fighter or bomber defense in the rear, but no larger weaponry.
 
 \section{Weapons}
 \label{sec:Weapons}
@@ -155,39 +158,48 @@ A jumpdrive uses energy once to bend the space. The energy used depends on the d
   \centering
   \caption{Weapons}
   \label{tab:vessel-weapons}
-  \begin{tabularx}{\textwidth}{|l|l|l|l|l|X|}
+  \begin{tabularx}{\textwidth}{|l|l|p{1.1cm}|p{1.1cm}|p{1.2cm}|X|}
     \hline
-    Weapon       & Damage      & Range       & Cost & Weight  & Notes                            \\ \hline
-    Cannon       & 2d6         & 50 km       & 50 kCr.    & 5 tons  & ~                                \\ \hline
-    FLAK Cannon  & 1d4         & 5 km        & 30 kCr.    & 2 tons   & Requires 2 Speed Points to Dodge \\ \hline
-    Gatling Gun  & 1d8         & 20 km       & 10 kCr.    & 2 tons   & ~      \\ \hline
-    MRL          & See Missile & See Missile & 100 kCr.    & 20 tons & Can fire up to 12 missiles       \\ \hline
-    Torpedo tube & See Torpedo & See Torpedo & 200 kCr.    & 50 tons & Can only make 1 attack per turn  \\ \hline
-    Rail Gun     & 2d12     & 500 km      & 500 kCr.    & 40 tons & Ignores Armour                   \\ \hline
+    Weapon      & Damage & Range [km] & Cost [kCr] & Weight [ton] & Notes                                   \\ \hline
+    Cannon      & 2d6    & 100 & 50         & 2 & ~                                       \\ \hline
+    AAA Cannon  & 1d4    & 10  & 30         & 2 & Requires 2 Speed Points to Dodge        \\ \hline
+    Gatling Gun & 1d6    & 50  & 10         & 1 & ~ \\ \hline
+  \end{tabularx}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \caption{Big Weapons}
+  \begin{tabularx}{\textwidth}{|l|l|p{1.1cm}|p{1.2cm}|p{1.2cm}|X|}
+    \hline
+    Weapon       & Damage      & Range [km]       & Cost [kCr] & Weight [ton] & Notes                           \\ \hline
+    MRL          & \multicolumn{2}{l|}{See Missile} & 100        & 50            & Can fire up to 12 missiles      \\ \hline
+    Torpedo tube & \multicolumn{2}{l|}{See Torpedo} & 200        & 75            & Can only make 1 attack per turn \\ \hline
+    Rail Gun     & 4d8         & 500      & 500        & 25            & Ignores Armour                  \\ \hline
   \end{tabularx}
 \end{table}
 
 \begin{table}
   \centering
   \caption{Torpedos}
-  \begin{tabularx}{\textwidth}{|l|l|l|X|}
+    \begin{tabularx}{\textwidth}{|l|l|p{1.1cm}|p{1.2cm}|X|}
     \hline
-    Torpedo            & Damage & Cost & Notes                                               \\ \hline
-    Gravity Torpedo    & 2d6   & 250 kCr. & Reduces Speed Points by 1.                          \\ \hline
-    Nuclear Torpedo    & 2d8   & 500 kCr. & Applies lethal radiation to location.               \\ \hline
-    Antimatter Torpedo & 2d12   & 1 MCr. & On hit also effects directly surrounding locations. \\ \hline
+    Torpedo            & Damage & Cost [kCr] & Weight [ton] & Notes                                               \\ \hline
+    Gravity Torpedo    & 2d8    & 250        & 0.5             & Reduces Speed Points by 1.                          \\ \hline
+    Nuclear Torpedo    & 2d12   & 500        & 1             & Applies lethal radiation to location.               \\ \hline
+    Antimatter Torpedo & 4d8    & 1000       & 2             & On hit also effects directly surrounding locations. \\ \hline
   \end{tabularx}
 \end{table}
 
 \begin{table}
   \centering
   \caption{Missiles}
-  \begin{tabularx}{\textwidth}{|l|l|l|l|X|}
+    \begin{tabularx}{\textwidth}{|l|l|p{1.1cm}|p{1.2cm}|X|}
     \hline
-    Missile         & Damage & Cost & Weight   & Notes                                                      \\ \hline
-    Basic Missile   & 1d6    & 1000 & 0.1 tons & ~                                                          \\ \hline
-    Guided Missile  & 1d6    & 2500 & 0.1 tons & Rolls an attack every turn until it hits or it's destroyed \\ \hline
-    Nuclear Warhead & 2d6    & 5000 & 0.5 tons & Applies lethal radiation to location                       \\ \hline
+    Missile         & Damage & Cost [Cr] & Weight [ton] & Notes                                                      \\ \hline
+    Basic Missile   & 1d6    & 2000      & 0.1     & ~                                                          \\ \hline
+    Guided Missile  & 1d6    & 5000      & 0.1     & Rolls an attack every turn until it hits or it's destroyed \\ \hline
+    Nuclear Warhead & 2d6    & 10000     & 0.5     & Applies lethal radiation to location                       \\ \hline
   \end{tabularx}
 \end{table}
 
@@ -214,25 +226,7 @@ The combat with vessels is similiar to the rules described in Chapter~\ref{chap:
 \subsection{Range \& Position}
 \label{sub:Vessels-Combat-Setup-Range}
 
-The distances are similiar to those in Chapter~\ref{chap:Combat}:
-
-\begin{table}[H]
-  \centering
-  \caption{Range}
-  \label{tab:vessel-range}
-  \begin{tabular}{|l|l|}
-    \hline
-    Range    & Distance       \\ \hline
-    Adjacent & < 1km          \\ \hline
-    Close    & 1km - 10km     \\ \hline
-    Medium   & 10km - 100km   \\ \hline
-    Far      & 100km - 1000km \\ \hline
-    Distant  & > 1000km       \\ \hline
-  \end{tabular}
-\end{table}
-
-
-Also, before combat begins be sure to determine the relative positions of each ship, and which side is facing where. Since it takes Speed Points to turn in combat and turrets can not fire into all arcs, the orientation is important too.
+Before combat begins be sure to determine the relative positions and distances of each ship. Since it takes Speed Points to turn in combat and turrets can not fire into all arcs, the orientation is important too.
 
 \subsection{Crew Positions}
 \label{sub:Vessels-Combat-Setup-Crew-Positions}
