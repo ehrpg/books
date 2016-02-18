@@ -11,6 +11,19 @@ The hitpoints of anyvessel are composed by its three pools:
   \item[Structure] The integrity of a vessel is abstracted by Structure Points. If they reach 0, the vessel is completely destroyed.
 \end{description}
 
+\section{Repairs}
+\label{sec:Repairs}
+
+\subsection{Hull \& Structure}
+
+Hull Damage can be repaired using up 1 ton of spare parts and requires 1d10 days of work per 1 damage taken.
+Structure Damage can only be used in a port or factory and requires 1d10 weeks of work per 1 damage taken. Each day of Structure repairs costs 100.000 Credits.
+
+\subsection{Components}
+\label{sub:Components}
+
+Any component can be repaired using up 1 ton of spare parts and requires 1d10 days of work per hit taken. Components that are not completely destroyed can be temporarily repaired with a successful \emph{Engineering} skill check, effectively reducing the hits taken of the component by 1 for 1d10 hours. A disabled component can then be used with a penalty, while a component with a penalty can then be used without any impairments.
+
 \section{Hull}
 \label{sec:Hull}
 
@@ -19,7 +32,11 @@ The Hull defines the size of a vessel. The size is measured by displacement tons
 Smaller vessels, namely anything with less than 100 tons, also have additional pool values for personal combat. Every 10 tons add 5 Hull Points and Structure Points for the personal scale, to a maximum of 50 Structure Points and 50 Hull Points at a 100 displacement tons.
 A small vessel gets an additional Hull Point every 50 tons and an additional Structure Point at 80 tons.
 
-The base price of a vessel is a million Credits. Add a 100 thousand Credits for each additional 10 tons of hull.
+The base price of any vessel is a million Credits.
+
+For normal vessels add another million Credits for each 50 tons.
+
+For small vessels add 100.000 Credits for each 10 tons.
 
 \begin{table}[H]
   \centering
@@ -72,29 +89,16 @@ Fusion reactors are fueled by processed hydron fuel cells, while  a matter/anti-
 
 \subsection{Jump drives}
 
-Jump drives allow interstellar and even intergalactic travel but require a lot of power to be initiated.
+Jump drives allow interstellar and even intergalactic travel but require a lot of power to be initiated. Using a jump drive creates a radioactive isotope. The radioactivity is not harmful to humans, but it can be very easily picked up by modern radars. Analysis of the radioactive residue allows an approximation about when a vessel activated its jump drive and how big the vessel was.
 
 \subsubsection[Warp drive]{Warp drive\footnote{Also known as Alcubierre drive.}}
 
-Requires a the energy output of a fusion reactor.
-
 \subsubsection[Hyperdrive]{Hyperdrive\footnote{Also known as Einstein-Rosen-Bridge drive.}}
-
-Requires a the energy output of a matter/anti-matter reactor.
-
-\section{Travel}
-\label{sec:Travel}
-
-\subsection{Sublight Travel}
-
-Sublight propulsion is a cheap but slow mean of travel.
-
-\subsection{Jump drives}
-
-A jumpdrive uses energy once to bend the space. The energy used depends on the distance from origin to destination and the mass of the vessel. Using a jump drive creates a radioactive isotope. The radioactivity is not harmful to humans, but it can be very easily picked up by modern radars. Analysis of the radioactive residue allows an approximation about when a vessel activated its jump drive and how big the vessel was.
 
 \section{Armour}
 \label{sec:Armour}
+
+Armour protects a ship form taking serious damage. Armour plates are cheaper and easier to replace than Hull or Structure Damage. Each Armour plating takes up 5\% of the vessels hull. Armour cannot be repaired.
 
 \begin{table}[H]
   \centering
@@ -114,11 +118,13 @@ A jumpdrive uses energy once to bend the space. The energy used depends on the d
 \section{Hardpoints \& Turrets}
 \label{sec:Hardpoints & Turrets}
 
-Any vessel has hardpoints whereas each serves as a platform for exactly one turret. The turret defines how many weapons can fit onto it. It does not matter which weapons are used for multiple turret mounts. F.e. a triple turret mount might have a Gatling Gun, a AAA Cannon and a normal Cannon. Big weapons take up one hardpoint, so no extra turrets are needed for Big Weaponry. Also, those weapons are fixed to the direction they are facing.
+Any vessel has hardpoints whereas each serves as a platform for exactly one turret. The turret defines how many weapons can fit onto it. It does not matter which weapons are used for multiple turret mounts. F.e. a triple turret mount might have a Gatling Gun, a AAA Cannon and a normal Cannon.
+
+Heavy weapons take up one hardpoint and 50 displacement tons. Heavy weapons do not need any turrets, because they are fixed in the direction they are facing.
 
 A hardpoint can be located anywhere on the ship, but usually the chassis dictates where a weapon mount is located. Every 100 tons of hull rounded down adds a hardpoint, starting with 1 hardpoint at 100 tons.
 
-Small vessels gain an anti personal weapon every 10 tons of hull and a ship weapon every 30 tons starting with 1 each at 10 tons. Small vessels cannot have Big Weaponry.
+Small vessels gain an anti personal weapon every 10 tons of hull and a ship weapon every 30 tons starting with 1 each at 10 tons. Small vessels cannot have Heavy weaponry.
 
 \begin{table}[H]
   \centering
@@ -169,13 +175,13 @@ The bearing of a turret defines in which arcs a battery can fire at. Usually, ei
 
 \begin{table}[H]
   \centering
-  \caption{Big Weapons}
-  \begin{tabularx}{\textwidth}{|l|l|p{1.1cm}|p{1.2cm}|p{1.2cm}|X|}
+  \caption{Heavy weapons}
+  \begin{tabularx}{\textwidth}{|l|l|p{1.1cm}|p{1.2cm}|X|}
     \hline
-    Weapon       & Damage      & Range [km]       & Cost [kCr] & Weight [ton] & Notes                           \\ \hline
-    MRL          & \multicolumn{2}{l|}{See Missile} & 100        & 50            & Can fire up to 12 missiles      \\ \hline
-    Torpedo tube & \multicolumn{2}{l|}{See Torpedo} & 200        & 75            & Can only make 1 attack per turn \\ \hline
-    Rail Gun     & 4d8         & 500      & 500        & 25            & Ignores Armour                  \\ \hline
+    Weapon       & Damage      & Range [km]       & Cost [kCr]  & Notes                           \\ \hline
+    MRL          & \multicolumn{2}{l|}{See Missile} & 100       & Can fire up to 12 missiles      \\ \hline
+    Torpedo tube & \multicolumn{2}{l|}{See Torpedo} & 200       & Can only make 1 attack per turn \\ \hline
+    Rail Gun     & 4d8         & 500      & 500           & Ignores Armour                  \\ \hline
   \end{tabularx}
 \end{table}
 
@@ -311,21 +317,21 @@ Some valid actions are:
   \centering
   \caption{Location}
   \label{tab:vessel-location}
-  \begin{tabular}{|l|l|l|l|}
+    \begin{tabular}{|l|l|l|l|}
     \hline
-    \textbf{2d6} & \textbf{Small Craft} & \textbf{External Damage} & \textbf{Internal Damage} \\ \hline
-    2   & Hull                & Hull                & Crew            \\ \hline
-    3   & Fusion reactor      & Sensors             & Jump Drive      \\ \hline
-    4   & Sublight Propulsion & Sublight Propulsion & Fusion reactor  \\ \hline
-    5   & Fuel                & Fuel                & Bay             \\ \hline
-    6   & Hull                & Hull                & Structure       \\ \hline
-    7   & Armour              & Armour              & Cargo           \\ \hline
-    8   & Hull                & Hull                & Structure       \\ \hline
-    9   & Turret              & Turret              & Bay             \\ \hline
-    10  & Hold                & Sublight Propulsion & Jump Drive      \\ \hline
-    11  & Fusion reactor      & Sensors             & Fusion reactor  \\ \hline
-    12  & Bridge              & Hull                & Bridge          \\ \hline
-  \end{tabular}
+    2d6 & Small Craft & External Damage & Internal Damage \\ \hline
+    2   & Hull        & Hull            & Crew            \\ \hline
+    3   & Reactor     & Sensors         & Jump Drive      \\ \hline
+    4   & Propulsion  & Reactor         & Reactor         \\ \hline
+    5   & Fuel        & Fuel            & Heavy Weapon    \\ \hline
+    6   & Hull        & Hull            & Structure       \\ \hline
+    7   & Armour      & Armour          & Cargo           \\ \hline
+    8   & Hull        & Hull            & Structure       \\ \hline
+    9   & Turret      & Turret          & Heavy Weapon    \\ \hline
+    10  & Hold        & Reactor         & Jump Drive      \\ \hline
+    11  & Reactor     & Sensors         & Reactor         \\ \hline
+    12  & Bridge      & Hull            & Bridge          \\ \hline
+    \end{tabular}
 \end{table}
 
 \subsection{Reactions}
