@@ -17,7 +17,7 @@ turn. Be it shooting or aiming a firearm, performing a skill check or running
 across the hallway to reach an elevator. Valid actions are:
 
 \begin{itemize}
-\item Move up to the characters speed.
+\item Use the character's speed points for movement.
 \item Use a non-complicated item, like reloading a firearm, pull the pin from a
   grenade etc. See the description for the item to see how many actions it takes
   to operate it.
@@ -57,6 +57,37 @@ lie down on the ground. If he moves, or reaches for his gun I shoot him.''
 The player uses \emph{action} to aim his gun at the guard, his
 \emph{free action} to tell the guard to get on the ground, and puts a
 \emph{reaction} in place in case the guard does anything funny.
+
+\section{Movement}
+\label{sec:7-Movement}
+
+A character can use his available speed points as part of an action to move
+about in the battle field. The general rule is that, for each point of speed
+available to the character he may move one metre.
+
+Certain actions use up more than speed points than others. See the table below
+to determine how many speed points are expended for various actions.
+
+\begin{center}
+  \begin{tabular}{| l | l |}
+    \hline
+    Action                   & Movement points   \\ \hline
+    Movement                 & 1 per metre       \\ \hline
+    Running                  & 1 per two metres  \\ \hline
+    Crawling                 & 2 per metre       \\ \hline
+    Climbing                 & 3 per metre       \\ \hline
+    Changing combat stance   & 1                 \\ \hline
+    Change stance from prone & 2                 \\ \hline
+  \end{tabular}
+\end{center}
+
+When changing stance a character has to expend one speed point. If the character
+is \emph{prone} he has to expend two speed point to change stance.
+
+Any terrain that hinders a persons movement is considered ``difficult terrain''.
+Such terrain doubles the amount of speed points need any sort of movement except
+changing stance. The following are examples of ``difficult terrain'': stairs,
+uphill slopes, snow, mudd or wet surfaces.
 
 \section{Turns}
 \label{sec:7-Turns}
@@ -240,24 +271,24 @@ cumulative penalty of plus eight (+8).
 \label{sub:7-Stance}
 
 A person firing can be in one of the following firing stances: \emph{standing},
-\emph{kneeling}, \emph{prone}, and \emph{other}. Standing also makes the person
-in question a medium target, \emph{kneeling} makes him a small and \emph{prone}
-a tiny target.
+\emph{kneeling}, \emph{prone firing}, and \emph{prone}. Standing also
+makes the person in question a medium target, \emph{kneeling} makes
+him a small and \emph{prone} and \emph{prone firing} a tiny target.
 
-The stances above assume that the character is in the proper firing positions.
-A person who just fell down to the floor on his back is \emph{not} considered to
-be in prone firing position. Although the person would still be considered a
-tiny target.
+The difference between \emph{prone} and \emph{prone firing} is that a prone
+person does not gain any advantage while aiming his rifle. If a person is, for
+example, knocked down or off his feet he is considered \emph{prone}.
 
 The penalties for the stances are as followed:
 
 \begin{center}
   \begin{tabular}{| l | l |}
     \hline
-    Stance   & Penalty \\ \hline
-    Standing & -1      \\ \hline
-    Kneeling & -2      \\ \hline
-    Prone    & -3      \\
+    Stance        & Penalty \\ \hline
+    Standing      & -1      \\ \hline
+    Kneeling      & -2      \\ \hline
+    Prone firing  & -3      \\ \hline
+    Prone         & +2      \\ \hline
     \hline
   \end{tabular}
 \end{center}
@@ -462,7 +493,7 @@ Against the following check:
       \hline
       Result& Zone         & Effect                           & Major Wound     \\ \hline
       2     & Vital Organ  & \emph{Special}, \(Damage * 6\)   &                 \\ \hline
-      3,4   & Legs         &                                  & -2 Speed        \\ \hline
+      3,4   & Legs         &                                  & -2 Max Speed        \\ \hline
       5,6,7 & Torso        & \(Damage * 2\)                   & -2 Constituion  \\ \hline
       8,9   & Arms         &                                  & -2 Dexterity    \\ \hline
       10,11 & Head         & \(Damage * 3\)                   & -2 Perception   \\ \hline
