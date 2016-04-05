@@ -1,0 +1,140 @@
+\chapter{Injury and Death}
+
+\section{Hit Points}
+\label{sec:hp}
+
+Your hit points determine how much kick you have left in you. If you drop to or
+below zero you die. No matter how little hit points you have left your character
+is not hindered in any way. Wounds however, can hinder your character and must
+be treated.
+
+\subsection{Recovering Hit Points}
+\label{sub:recoverhp}
+
+If all wounds are cared for, and you have time to rest and heal, you roll to
+see if you naturally recover one hit point per week. Any straneous activity -
+such as fighting or traveling - interferes with this natural healing ability,
+and no hit point is recovered in that week. To see if you can recover one hit
+point make a consitution check against a DC totalling the amount of wounds you
+have (see below for wounds).
+
+Someone who is trained in \emph{Medicine} can speed up this healing process.
+First roll to \emph{diagnose} the patient and then to \emph{treat} the wounds.
+The DC is as followed:
+
+\[
+DC = 5 + \frac{\ob{hp}{HP lost}}{2}
+\]
+
+If the diagnose check is successful any difference can be added to the treatment
+roll as a bonus. If the diagnose check was unsuccessful any difference is
+substracted from the treatment roll as a penalty.
+
+Then roll for treatment, with the same DC, and add or subtract any relevant
+bonus or penalty from the diagnose check. If you succeed you can heal one hit
+point per day for one week. If you fail however, you do not cure any additional
+hit points. Diagnosis and treatment requires a medic lab and at least a few
+hours of work, and thus cannot be done again on the same day.
+
+A character is who is trained in \emph{first aid} can do the same, but the DC is
+is more difficult:
+
+\[
+DC = 5 + \ub{hp}{HP lost}
+\]
+
+\section{Wounds}
+\label{sub:Wounds}
+
+The wounding system abstracts away injury, wounds and other impediments a
+character gains through the loss of hit points. Having suffered ``four wound
+damage'' does not mean, that the character has four minor wounds. They might as
+well be one major wound that has gradually gotten worse.
+
+Whenever a player takes damage (from any source) he has to roll to see whether
+he sustains a wound. Wounds are separate from HP loss and represent negative
+effects a player might sustain for losing HP.
+
+To see if the player gains a wound from roll a constitution check against the
+following the damage taken. This is the damage after any relevant armour is
+subtracted and before any zone modifiers are applied.
+
+If the check fails you gain a wound. This wound reduces your maximum hit points
+by one until it is treated. This effect stacks with all other wounds, and may
+even kill you if your maximium hit points reaches zero. The hit point loss from
+reducing your maximium hit points, does in itself not cause another wound.
+
+\subsection{Treating Wounds}
+
+A character capable \emph{Medicine} or \emph{First Aid} can try to treat a
+wound with a \emph{treatment} check. The DC is the amount of wounds (or the
+difference between your current and actual maximum HP) you have suffered. If
+\emph{Medicine} is used to treat the wound, you can attempt a \emph{diagnose}
+check to see if you gain a bonus to your treatment dice (just as described in
+\emph{Recoverig Hit Points}). If the check succeeds one wound is cured, and
+thus one maximum HP is restored.
+
+\[
+DC = \ob{wounds}{Wound points suffered}
+\]
+
+Wounds cannot be cured naturally over time, and either require specialised
+equipment or others to diagnose and treat you. A character can try to diagnose
+and treat himself, although he gains a +2 penalty to such checks. The DC is
+thus:
+
+\[
+DC = \ob{wounds}{Wound points suffered} \ub{+ 2}{penalty for self treatment}
+\]
+
+\subsection{Major Wounds}
+
+If your maximum HP is reduced below one half of your normal HPs through wounds
+you have suffered a \emph{major wound}. Whenever you do any strenous activity on
+a day, you must roll a constitution score against your wound total. If you fail
+this check you gain another wound point.
+
+If your maximum HP is reduced below one quarter of your normal HP through wounds
+you have suffered a \emph{fatal wound}. For every day your maximum hit points is
+reduced below one quarter, you must make a constitution score against the wound
+total. If you fail you gain another wound point.
+
+\[
+DC = \ob{wounds}{Wound points suffered}
+\]
+
+\subsection{Wounding Effects}
+
+Whenever your wound points reach a multiple of five (5, 10, 15 etc.) you can one
+additional wounding effect. Roll ten sided dice against the table below to
+determine this adverse affect.
+
+If your wound points are reduced below the nearest multiple of five, that
+negative effect is cured. If you reach that multiple of five again you
+immediately gain a new adverse affect. For example if you have 10 wound points,
+and a doctor cures you for one wound points (to 9) you lose whatever affect you
+have received when reaching the tenth wound point. But as soon as you take a
+wound again (thus reaching 10 again) you have to reroll to see what affect this
+has.
+
+\begin{table}
+  \caption{Adverse affects due to wounds}
+  \begin{center}
+    \begin{tabular}{|l|l|}
+      \hline
+      Result & Effect             \\ \hline
+      1      & 2 wounds           \\ \hline
+      2      & 1 wound            \\ \hline
+      3      & -2 speed           \\ \hline
+      4      & -2 strength        \\ \hline
+      5      & -2 dexterity       \\ \hline
+      6      & -2 constiution     \\ \hline
+      7      & -2 perception      \\ \hline
+      8      & 3 points of damage \\ \hline
+      9      & 1 point of damage  \\ \hline
+      10     & -                  \\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+These effects stack with each other. If you roll a ten nothing happens.

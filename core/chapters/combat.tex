@@ -458,8 +458,8 @@ Other forms of damage are of course also possible, for example a player can
 take fire damage from an open flame, or acid damage from being exposed to
 acids or other corrosive fluids.
 
-\subsection{Zones and Wounds}
-\label{sub:7-Zones and Wounds}
+\subsection{Zones}
+\label{sub:7-Zones}
 
 When a player hits another, either with a ranged or melee weapon, the attacking
 player rolls two six sided die (2d6) to determine where he scores a hit.
@@ -471,33 +471,21 @@ example damage multiplier) and substracts that number from his hit points. If
 the target reaches zero or below zero hit points total, the target is dead.
 
 If the target survives it, he then has to roll another check to see if the
-injury causes a major wound. The difficulty is determined as followed:
-
-\[
-DC = \ub{5}{base} + \ob{dmg}{Damage taken}
-\]
-
-The \emph{Damage taken} is the actual damage you took, after any reductions
-through armour, and before any additional damage multipliers.
-
-Against the following check:
-
-\[
-1d10 + \ub{con}{Constition score}
-\]
+injury causes a wound. See the chapter \emph{Injury and Death} regarding rules
+for wounds.
 
 \begin{table}
   \caption{Wound zones for a human, or human-like creature}
   \begin{center}
-    \begin{tabular}{|l|l|l|l|}
+    \begin{tabular}{|l|l|l|}
       \hline
-      Result& Zone         & Effect                           & Major Wound     \\ \hline
-      2     & Vital Organ  & \emph{Special}, \(Damage * 6\)   &                 \\ \hline
-      3,4   & Legs         &                                  & -2 Max Speed        \\ \hline
-      5,6,7 & Torso        & \(Damage * 2\)                   & -2 Constituion  \\ \hline
-      8,9   & Arms         &                                  & -2 Dexterity    \\ \hline
-      10,11 & Head         & \(Damage * 3\)                   & -2 Perception   \\ \hline
-      12    & Vital Organ  & \emph{Special}, \(Damage * 6\)   &                 \\
+      Result& Zone         & Effect                          \\ \hline
+      2     & Vital Organ  & \emph{Special}, \(Damage * 6\)  \\ \hline
+      3,4   & Legs         &                                 \\ \hline
+      5,6,7 & Torso        & \(Damage * 2\)                  \\ \hline
+      8,9   & Arms         &                                 \\ \hline
+      10,11 & Head         & \(Damage * 3\)                  \\ \hline
+      12    & Vital Organ  & \emph{Special}, \(Damage * 6\)  \\ \hline
       \hline
     \end{tabular}
   \end{center}
